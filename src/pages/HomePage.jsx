@@ -10,11 +10,7 @@ export default function HomePage(){
        <>
        
      <Navbar />
-     <Hero />
-     <About />
-     <Projects />
-     <Platforms />
-     <ContactFooter />
+     
        
        </>
     )

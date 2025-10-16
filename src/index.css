@@ -24,3 +24,40 @@ ul {
 li {
   list-style: none;
 }
+/* NAVBAR STILE*/
+.container-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95); 
+  padding: 10px 20px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+}
+
+.list-link-navbar {
+  display: flex;
+  flex-direction: column; 
+  gap: 10px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+.link-navbar a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.link-navbar a:hover {
+  color: #0077ff; 
+  transform: translateY(-2px);
+}
