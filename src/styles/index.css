@@ -76,3 +76,57 @@ li {
     transform: translateY(0);
   }
 }
+
+#about {
+  scroll-margin-top: 80px;
+}
+
+
+/* ABOUT STYLE */
+.container-about {
+  padding: 60px 20px;
+  text-align: center;
+  padding-top: 200px;
+}
+#about {
+  scroll-margin-top: 200px; 
+}
+
+
+
+.about-inner {
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.title-about {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.description-about {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.about-bottom-front,
+.about-bottom-front-spec,
+.about-bottom-back,
+.about-bottom-back-spec {
+  margin-bottom: 30px;
+}
+
+.title-skills {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.span-skill {
+  display: inline-block;
+  background-color: rgba(71, 99, 223, 0.2);
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 5px;
+  font-size: 1rem;
+}
+
