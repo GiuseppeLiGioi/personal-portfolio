@@ -10,10 +10,13 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif; 
+   font-family: 'Inter', sans-serif;
   line-height: 1.5;
   color: #111; 
   background-color: #fff; 
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
 }
 
 
@@ -27,37 +30,42 @@ li {
 /* NAVBAR STILE*/
 .container-navbar {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.95); 
-  padding: 10px 20px;
+  background-color: rgba(71, 99, 223, 0.95); 
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   display: flex;
   justify-content: center;
+  align-items: center;
+  animation: fadeInSlide 0.8s ease-out forwards;
+  padding: 10px;
 }
 
 .list-link-navbar {
   display: flex;
+  justify-content: center;
   flex-direction: column; 
   gap: 10px;
   align-items: center;
-  margin: 0;
-  padding: 0;
-  list-style: none;
 }
 
 
 .link-navbar a {
   text-decoration: none;
-  color: #111;
-  font-weight: 500;
+  color: white;
   font-size: 1rem;
-  transition: color 0.3s, transform 0.3s;
 }
 
 .link-navbar a:hover {
-  color: #0077ff; 
-  transform: translateY(-2px);
+  color: rgb(16, 10, 65); 
+}
+
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
