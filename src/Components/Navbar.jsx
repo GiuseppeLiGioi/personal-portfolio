@@ -1,6 +1,7 @@
 export default function Navbar(){
     return(
         <nav className="container-navbar">
+            <div className="navbar-inner">
             <ul className="list-link-navbar"> 
                 <li className="link-navbar"><a href="#hero">Home</a></li>
                 <li className="link-navbar"><a href="#about">About Me</a></li>
@@ -8,6 +9,7 @@ export default function Navbar(){
                 <li className="link-navbar"><a href="#platforms">Piattaforme</a></li>
                 <li className="link-navbar"><a href="#contact">Contatti</a></li>
             </ul>
+            </div>
         </nav>
     )
 }

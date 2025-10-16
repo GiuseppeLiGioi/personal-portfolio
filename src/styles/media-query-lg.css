@@ -1,3 +1,20 @@
-@media (min-width: 1024px){
-    
+@media (min-width: 1024px){ 
+.container-navbar {
+  padding: 35px;
+}
+
+.navbar-inner {
+  max-width: 1200px;
+}
+
+.list-link-navbar {
+  flex-direction: row;
+  gap: 40px;
+}
+
+
+.link-navbar a {
+  font-size: 1.5rem;
+}
+
 }
