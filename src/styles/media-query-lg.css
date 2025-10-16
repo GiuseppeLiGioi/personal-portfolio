@@ -1,4 +1,5 @@
 @media (min-width: 1024px){ 
+ /*NAVBAR RESPONSIVE*/ 
 .container-navbar {
   padding: 35px;
 }
@@ -16,5 +17,37 @@
 .link-navbar a {
   font-size: 1.5rem;
 }
+
+ /*ABOUT RESPONSIVE*/ 
+
+.about-inner {
+  max-width: 1200px;
+}
+
+.title-about {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+.description-about {
+  font-size: 1.5rem;
+}
+
+.about-bottom-front,
+.about-bottom-front-spec,
+.about-bottom-back,
+.about-bottom-back-spec {
+  margin-bottom: 60px;
+}
+
+.title-skills {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.span-skill {
+  font-size: 1.3rem;
+}
+
 
 }
