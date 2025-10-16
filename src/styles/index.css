@@ -38,6 +38,7 @@ li {
   align-items: center;
   animation: fadeInSlide 0.8s ease-out forwards;
   padding: 10px;
+  border-radius: 10px;
 }
 
 .navbar-inner {
@@ -126,5 +127,13 @@ li {
   border-radius: 5px;
   margin: 5px;
   font-size: 1rem;
+}
+
+.box-about{
+  background-color: rgb(219, 217, 217);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 600px;
+  margin: 80px auto;
 }
 

@@ -9,6 +9,8 @@ export default function About(){
         </p>
         </div>
 
+        <div className="box-about">
+
         <div className="about-bottom-front">
             <h3 className="title-skills">Stack Tecnologico Frontend</h3>
             <span className= "span-skill">HTML</span>
@@ -33,6 +35,10 @@ export default function About(){
             <span className= "span-skill">Input non controllati: useRef</span>
             <span className= "span-skill">useReducer</span>
         </div>
+        </div>
+
+
+        <div className="box-about">
 
         <div className="about-bottom-back">
             <h3 className="title-skills">Stack Tecnologico Backend</h3>
@@ -51,6 +57,9 @@ export default function About(){
             <span className= "span-skill">Relazioni tra Entità</span>
             <span className= "span-skill">Upload / Download img</span>
         </div>
+        </div>
+
+
             
 
         </section>

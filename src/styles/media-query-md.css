@@ -52,5 +52,10 @@
 .span-skill {
   font-size: 1.2rem;
 }
+
+.box-about{
+  max-width: 740px;
+  margin: 90px auto;
+}
   
 }
