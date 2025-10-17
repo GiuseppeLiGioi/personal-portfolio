@@ -1,153 +1,127 @@
-@media (min-width: 768px){
+@media (min-width: 768px) {
 
-/*NAVBAR RESPONSIVE*/ 
-.container-navbar {
-  padding: 30px;
-}
+  /*NAVBAR RESPONSIVE*/
+  .container-navbar {
+    padding: 30px;
+  }
 
-.navbar-inner {
-  max-width: 740px;
-}
+  .navbar-inner {
+    max-width: 740px;
+  }
 
-.list-link-navbar {
-  flex-direction: row;
-  gap: 30px;
-}
-
-
-.link-navbar a {
-  font-size: 1.3rem;
-}
-
- /*ABOUT RESPONSIVE*/ 
-.container-about {
-  padding-top: 150px;
-}
-#about {
-  scroll-margin-top: 150px; 
-}
+  .list-link-navbar {
+    flex-direction: row;
+    gap: 30px;
+  }
 
 
-.title-about {
-  font-size: 2.0rem;
-  margin-bottom: 30px;
-}
+  .link-navbar a {
+    font-size: 1.3rem;
+  }
 
-.description-about {
-  font-size: 1.2rem;
-}
+  /*ABOUT RESPONSIVE*/
+  .container-about {
+    padding-top: 150px;
+  }
 
-.about-bottom-front,
-.about-bottom-front-spec,
-.about-bottom-back,
-.about-bottom-back-spec {
-  margin-bottom: 45px;
-}
-
-.title-skills {
-  font-size: 1.4rem;
-  margin-bottom: 15px;
-}
-
-.span-skill {
-  font-size: 1.2rem;
-}
-
-.box-about{
-  max-width: 740px;
-  margin: 90px auto;
-}
-
-/*HERO STYLE*/
-.container-hero{
-  flex-direction: row;
-  justify-content: space-between;
-  max-width: 740px;
-  text-align: left;
-  padding-top: 150px;
-  gap: 70px;
-}
-
-.container-img-hero img {
-  width: 200px;
-  margin-bottom: 0px;
-}
-
-.hero-divider{
-  width: 0.1rem;
-  height: 250px;
-  margin: 0 5px;
-}
+  #about {
+    scroll-margin-top: 150px;
+  }
 
 
+  .title-about {
+    font-size: 2.0rem;
+    margin-bottom: 30px;
+  }
+
+  .description-about {
+    font-size: 1.2rem;
+  }
+
+  .about-bottom-front,
+  .about-bottom-front-spec,
+  .about-bottom-back,
+  .about-bottom-back-spec {
+    margin-bottom: 45px;
+  }
+
+  .title-skills {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+
+  .span-skill {
+    font-size: 1.2rem;
+  }
+
+  .box-about {
+    max-width: 740px;
+    margin: 90px auto;
+  }
+
+  /*HERO STYLE*/
+  .container-hero {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 740px;
+    text-align: left;
+    padding-top: 150px;
+    gap: 70px;
+  }
+
+  .container-img-hero img {
+    width: 200px;
+    margin-bottom: 0px;
+  }
+
+  .hero-divider {
+    width: 0.1rem;
+    height: 250px;
+    margin: 0 5px;
+  }
+
+  .container-hero-info {
+    align-items: flex-start;
+  }
+
+  .container-hero-info p {
+    font-size: 1.2rem;
+  }
+
+  .btn-hero {
+    border-radius: 10px;
+    padding: 15px;
+  }
 
 
-.container-hero-info{
-  align-items: flex-start;
-}
 
-.container-hero-info p{
-  font-size: 1.2rem;
-}
+  /*INTERACTIVE STYLE*/
+  .container-interactive {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 740px;
+    margin: 0 auto;
+  }
 
-.btn-hero{
-  border-radius: 10px;
-  padding: 15px;
-}
-
-/*INTERACTIVE STYLE*/
-
-.container-interactive{
-  flex-direction: row;
-  max-width: 740px;
-}
-
-.container-card-interactive{
-  
-  width: calc(100% / 3 - 50px);
-  
-}
-
-.container-logic-1,
-.container-logic-2{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-
-.container-button-interactive-css{
-  display: flex;
-  justify-content:center ;
-  align-items: center;
-  gap: 20px;
-  margin: 20px 0;
-  padding: 10px;
-}
-
-.btn-interactive{
-  background-color:  rgba(71, 99, 223, 0.95);
-  border-radius: 5px;
-  padding: 10px;
-  color: white;
-  border: none;
-}
-
-.container-card-interactive-dark{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  width: 600px;
-  border-radius: 10px;
-  background-color: rgb(26, 25, 25);
-  color: white;
-  padding: 10px;
-}
-
-
+  .container-card-interactive,
+  .container-card-interactive-dark {
+    flex: 0 0 calc(50% - 20px);
+    min-height: 400px;
+    justify-content: space-between;
+  }
 
   
+
+  .container-logic-1 p,
+  .container-logic-2 p,
+  .container-logic-1 h3,
+  .container-logic-2 h3 {
+    font-size: 1.2rem;
+  }
+
+
+
+
 }

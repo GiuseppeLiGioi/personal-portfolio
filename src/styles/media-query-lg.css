@@ -68,6 +68,28 @@
 }
 
 
+ /*INTERACTIVE STYLE*/
+  .container-interactive {
+    gap: 40px;
+    max-width: 1200px; 
+  }
+
+  .container-card-interactive,
+  .container-card-interactive-dark {
+    flex: 0 0 calc(50% - 20px);
+    min-height: 400px;
+    justify-content: space-between;
+  }
+
+  
+
+  .container-logic-1 p,
+  .container-logic-2 p,
+  .container-logic-1 h3,
+  .container-logic-2 h3 {
+    font-size: 1.5rem;
+  }
+
 
 
 }

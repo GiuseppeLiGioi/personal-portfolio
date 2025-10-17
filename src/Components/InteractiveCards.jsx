@@ -126,6 +126,24 @@ export default function InteractiveCards() {
             </div>
 
 
+             <div className="container-card-interactive">
+                <div className="container-logic-1">
+                    <h3>Scopri qualcosa in più su di me 🚀</h3>
+                    <button className="btn-interactive" onClick={() => handlePhrase()}>Scopri di più</button>
+                </div>
+
+                <div className="container-logic-2">
+                    <div className="container-progressbar">
+
+                        <div className="progressbar">
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     )
 }
