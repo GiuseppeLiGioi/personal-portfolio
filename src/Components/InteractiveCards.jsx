@@ -8,6 +8,18 @@ export default function InteractiveCards() {
 
     const [bgColor, setBgColor] = useState("")
     const [darkMode, setDarkMode] = useState(false)
+    const [index, setIndex] = useState(0)
+    const [phrase, setPhrase] = useState("")
+    const [progress, setProgress] = useState(0)
+
+
+    const myArray = [
+        "Full-Stack per me vuol dire: non smettere mai di imparare sia lato front sia lato back! 👨🏼‍💻",
+        "Mi adatto facilmente al contesto lavorativo, adoro affrontare nuove sfide e relazionarmi con nuove persone! 👨🏼‍💻",
+        "Ho vent'anni: questo non mi spaventa e non mi demoralizza, anzi, accresce ancora di più la mia curiosità e la mia voglia di imparare! 👨🏼‍💻",
+        "Sarà la continua evoluzione ed innovazione di questo settore, ma sono sempre super stimolato ed affascinato da ogni tecnologia nuova che implemento! 👨🏼‍💻",
+        "Non vedo l'ora di sentirmi piccolo al fianco di persone professioniste, da cui avrò l'onore di poter apprendere cose nuove ed accrescere le mie competenze! 👨🏼‍💻"
+    ]
 
     function handleGenerate() {
         const num = Math.floor(Math.random() * 101)
@@ -94,7 +106,8 @@ export default function InteractiveCards() {
 
             <div className="container-card-interactive">
                 <div className="container-logic-1">
-
+                <h3>Premi il bottone e scopri qualcosa in più su di me 🚀</h3>
+                <button className="btn-interactive"></button>
                 </div>
 
                 <div className="container-logic-2">
