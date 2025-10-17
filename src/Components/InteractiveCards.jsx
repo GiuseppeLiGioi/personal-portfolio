@@ -4,7 +4,7 @@ export default function InteractiveCards() {
     const [casualNum, setCasualNum] = useState(0)
     const [numUser, setNumUser] = useState(0)
     const [feedback, setFeedback] = useState("")
-    const[numGame, setNumGame] = useState(Math.floor(Math.random() * 51))
+    const [numGame, setNumGame] = useState(Math.floor(Math.random() * 51))
 
     const [bgColor, setBgColor] = useState("")
     const [darkMode, setDarkMode] = useState(false)
@@ -27,21 +27,21 @@ export default function InteractiveCards() {
     }
 
     function handleVerify(num) {
-        
-        if(num === numGame){
-            setFeedback(`🎉 Complimenti, numero indovinato! Il numero era: ${numGame}`)  
-        } 
-        else if(num > numGame){
-            setFeedback("⬇️ Troppo alto!")    
+
+        if (num === numGame) {
+            setFeedback(`🎉 Complimenti, numero indovinato! Il numero era: ${numGame}`)
         }
-        else{
-        setFeedback("⬆️ Troppo basso!")
+        else if (num > numGame) {
+            setFeedback("⬇️ Troppo alto!")
+        }
+        else {
+            setFeedback("⬆️ Troppo basso!")
         }
     }
 
-    
 
-    function handleReset(){
+
+    function handleReset() {
         setNumUser("")
         setFeedback("")
         setNumGame(Math.floor(Math.random() * 51))
@@ -49,17 +49,21 @@ export default function InteractiveCards() {
 
 
 
-     function handleColor() {
+    function handleColor() {
         const color = "#" + Math.floor(Math.random() * 16777215).toString(16)
         setBgColor(color)
     }
 
-    function handleTheme(){
+    function handleTheme() {
+        setDarkMode(!darkMode)
+    }
+
+      function handlePhrase() {
         setDarkMode(!darkMode)
     }
 
 
-    
+
 
 
     return (
@@ -84,21 +88,21 @@ export default function InteractiveCards() {
                         onChange={(e) => setNumUser(e.target.value)}
                     />
                     <div className="container-button-interactive-css">
-                    <button className="btn-interactive" onClick={() => handleVerify(Number(numUser))}>Verifica</button>
-                    <button className="btn-interactive" onClick={() => handleReset()}>Reset Gioco</button>
+                        <button className="btn-interactive" onClick={() => handleVerify(Number(numUser))}>Verifica</button>
+                        <button className="btn-interactive" onClick={() => handleReset()}>Reset Gioco</button>
                     </div>
                     <p>{feedback}</p>
                 </div>
             </div>
 
 
-            <div className={darkMode ? "container-card-interactive-dark" : "container-card-interactive"} style={{backgroundColor: bgColor}}>
+            <div className={darkMode ? "container-card-interactive-dark" : "container-card-interactive"} style={{ backgroundColor: bgColor }}>
                 <div className="container-logic-css">
                     <h3>Cambia il colore di sfondo o il tema della card!</h3>
 
                     <div className="container-button-interactive-css">
-                         <button className="btn-interactive" onClick={() => handleColor()}>Cambia colore!</button>
-                         <button className="btn-interactive" onClick={() => handleTheme()}>{darkMode ? "Tema chiaro" : "Tema scuro"}</button>
+                        <button className="btn-interactive" onClick={() => handleColor()}>Cambia colore!</button>
+                        <button className="btn-interactive" onClick={() => handleTheme()}>{darkMode ? "Tema chiaro" : "Tema scuro"}</button>
                     </div>
                 </div>
             </div>
@@ -106,12 +110,18 @@ export default function InteractiveCards() {
 
             <div className="container-card-interactive">
                 <div className="container-logic-1">
-                <h3>Premi il bottone e scopri qualcosa in più su di me 🚀</h3>
-                <button className="btn-interactive"></button>
+                    <h3>Scopri qualcosa in più su di me 🚀</h3>
+                    <button className="btn-interactive" onClick={() => handlePhrase()}>Scopri di più</button>
                 </div>
 
                 <div className="container-logic-2">
+                    <div className="container-progressbar">
 
+                        <div className="progressbar">
+
+                        </div>
+
+                    </div>
                 </div>
             </div>
 

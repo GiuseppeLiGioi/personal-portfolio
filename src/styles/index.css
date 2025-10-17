@@ -236,7 +236,8 @@ li {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  width: 600px;
+  min-width: 500px;
+  max-width: 600px;
   border-radius: 10px;
   background-color: rgb(223, 221, 221);
   padding: 10px;
