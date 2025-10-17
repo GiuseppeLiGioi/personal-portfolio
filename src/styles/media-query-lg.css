@@ -54,5 +54,20 @@
   margin: 100px auto;
 }
 
+/*HERO STYLE*/
+/*HERO STYLE*/
+.container-hero{
+  max-width: 1200px;
+  padding-top: 170px;
+  gap: 80px;
+}
+
+
+.container-hero-info p{
+  font-size: 1.5rem;
+}
+
+
+
 
 }

@@ -57,5 +57,39 @@
   max-width: 740px;
   margin: 90px auto;
 }
+
+/*HERO STYLE*/
+.container-hero{
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 740px;
+  text-align: left;
+  padding-top: 150px;
+  gap: 70px;
+}
+
+.container-img-hero img {
+  width: 200px;
+  margin-bottom: 0px;
+}
+
+
+
+
+.container-hero-info{
+  align-items: flex-start;
+}
+
+.container-hero-info p{
+  font-size: 1.2rem;
+}
+
+.btn-hero{
+  border-radius: 10px;
+  padding: 15px;
+}
+
+
+
   
 }
