@@ -173,6 +173,12 @@ li {
   transform: scale(1.10);
 }
 
+.hero-divider{
+  border: 0.1rem solid rgb(88, 88, 88);
+  width: 85%;
+  margin: 30px 0;
+}
+
 
 .container-hero-info{
   display: flex;
