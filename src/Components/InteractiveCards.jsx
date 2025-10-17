@@ -4,8 +4,9 @@ export default function InteractiveCards() {
     const [casualNum, setCasualNum] = useState(0)
     const [numUser, setNumUser] = useState(0)
     const [feedback, setFeedback] = useState("")
+    const[numGame, setNumGame] = useState(Math.floor(Math.random() * 51))
 
-    const [bgColor, setBgColor] = useState("#fff")
+    const [bgColor, setBgColor] = useState("")
     const [darkMode, setDarkMode] = useState(false)
 
     function handleGenerate() {
@@ -14,18 +15,27 @@ export default function InteractiveCards() {
     }
 
     function handleVerify(num) {
-        const numGame = Math.floor(Math.random() * 51)
         
-        if(num < numGame){
-        setFeedback("⬆️ Troppo basso!")
+        if(num === numGame){
+            setFeedback(`🎉 Complimenti, numero indovinato! Il numero era: ${numGame}`)  
         } 
         else if(num > numGame){
-        setFeedback("⬇️ Troppo alto!")    
+            setFeedback("⬇️ Troppo alto!")    
         }
         else{
-        setFeedback(`🎉 Complimenti, numero indovinato! Il numero era: ${numGame}`)   
+        setFeedback("⬆️ Troppo basso!")
         }
     }
+
+    
+
+    function handleReset(){
+        setNumUser("")
+        setFeedback("")
+        setNumGame(Math.floor(Math.random() * 51))
+    }
+
+
 
      function handleColor() {
         const color = "#" + Math.floor(Math.random() * 16777215).toString(16)
@@ -57,22 +67,26 @@ export default function InteractiveCards() {
                     <input
                         type="number"
                         placeholder="Digita il numero e scopri se è corretto"
+                        className="input-interactive"
                         value={numUser}
                         onChange={(e) => setNumUser(e.target.value)}
                     />
-                    <button className="btn-interactive" onClick={() => handleVerify(numUser)}>Verifica</button>
+                    <div className="container-button-interactive-css">
+                    <button className="btn-interactive" onClick={() => handleVerify(Number(numUser))}>Verifica</button>
+                    <button className="btn-interactive" onClick={() => handleReset()}>Reset Gioco</button>
+                    </div>
                     <p>{feedback}</p>
                 </div>
             </div>
 
 
-            <div className={darkMode ? "container-card-interactive-dark" : "container-card-interactive"} style={{backgroundColor: {bgColor}}}>
+            <div className={darkMode ? "container-card-interactive-dark" : "container-card-interactive"} style={{backgroundColor: bgColor}}>
                 <div className="container-logic-css">
                     <h3>Cambia il colore di sfondo o il tema della card!</h3>
 
-                    <div className="cotainer-button-interactive-css">
-                         <button className="btn-interactive" onClick={() => handleColor}>Cambia colore!</button>
-                         <button className="btn-interactive" onClick={() => handleTheme}>{darkMode ? "tema chiaro" : "tema scuro"}</button>
+                    <div className="container-button-interactive-css">
+                         <button className="btn-interactive" onClick={() => handleColor()}>Cambia colore!</button>
+                         <button className="btn-interactive" onClick={() => handleTheme()}>{darkMode ? "Tema chiaro" : "Tema scuro"}</button>
                     </div>
                 </div>
             </div>

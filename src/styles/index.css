@@ -217,3 +217,115 @@ li {
   }
 }
 
+
+/*INTERACTIVE STYLE*/
+
+.container-interactive{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.container-card-interactive{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 600px;
+  border-radius: 10px;
+  background-color: rgb(223, 221, 221);
+  padding: 10px;
+}
+
+.container-logic-1,
+.container-logic-2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.container-button-interactive-css{
+  display: flex;
+  justify-content:center ;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.btn-interactive{
+  background-color:  rgba(71, 99, 223, 0.95);
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  border: none;
+}
+
+.container-card-interactive-dark{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 600px;
+  border-radius: 10px;
+  background-color: rgb(26, 25, 25);
+  color: white;
+  padding: 10px;
+}
+
+.container-card-interactive,
+.container-card-interactive-dark {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container-card-interactive:hover,
+.container-card-interactive-dark:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.container-card-interactive,
+.container-card-interactive-dark {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+
+.btn-interactive:hover {
+  background-color: rgb(5, 24, 105);
+}
+
+
+.input-interactive {
+  width: 300px;
+  padding: 10px 12px;
+  border: 1.5px solid rgba(71, 99, 223, 0.6);
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  font-size: 1rem;
+  text-align: center;
+  color: black;
+}
+
+.input-interactive:focus {
+  outline: none;
+  border-color: rgba(71, 99, 223, 0.95);
+  box-shadow: 0 0 6px rgba(71, 99, 223, 0.4);
+  background-color: #fff;
+}
+
+.input-interactive::placeholder {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+
+
