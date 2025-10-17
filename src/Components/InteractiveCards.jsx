@@ -5,6 +5,9 @@ export default function InteractiveCards() {
     const [numUser, setNumUser] = useState(0)
     const [feedback, setFeedback] = useState("")
 
+    const [bgColor, setBgColor] = useState("#fff")
+    const [darkMode, setDarkMode] = useState(false)
+
     function handleGenerate() {
         const num = Math.floor(Math.random() * 101)
         setCasualNum(num)
@@ -23,6 +26,18 @@ export default function InteractiveCards() {
         setFeedback(`🎉 Complimenti, numero indovinato! Il numero era: ${numGame}`)   
         }
     }
+
+     function handleColor() {
+        const color = "#" + Math.floor(Math.random() * 16777215).toString(16)
+        setBgColor(color)
+    }
+
+    function handleTheme(){
+        setDarkMode(!darkMode)
+    }
+
+
+    
 
 
     return (
@@ -51,13 +66,14 @@ export default function InteractiveCards() {
             </div>
 
 
-            <div className="container-card-interactive">
-                <div className="container-logic-1">
+            <div className={darkMode ? "container-card-interactive-dark" : "container-card-interactive"} style={{backgroundColor: {bgColor}}}>
+                <div className="container-logic-css">
+                    <h3>Cambia il colore di sfondo o il tema della card!</h3>
 
-                </div>
-
-                <div className="container-logic-2">
-
+                    <div className="cotainer-button-interactive-css">
+                         <button className="btn-interactive" onClick={() => handleColor}>Cambia colore!</button>
+                         <button className="btn-interactive" onClick={() => handleTheme}>{darkMode ? "tema chiaro" : "tema scuro"}</button>
+                    </div>
                 </div>
             </div>
 
