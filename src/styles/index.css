@@ -149,3 +149,37 @@ li {
   }
 }
 
+
+.container-hero{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.container-img-hero{
+  padding-top: 120px;
+}
+
+.container-hero-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.container-hero-info p{
+  font-size: 1rem;
+}
+
+.btn-hero{
+  background-color: rgba(71, 99, 223, 0.95);
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  border: none;
+}
+

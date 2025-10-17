@@ -8,8 +8,8 @@ import ContactFooter from "../Components/ContactFooter"
 export default function HomePage(){
     return(
        <>
-      
      <Navbar />
+     <Hero />
      <About />
      
        
