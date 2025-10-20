@@ -107,5 +107,26 @@
 
 
 
+/*PROJECTS STYLE*/
+
+.container-projects-page{
+  max-width: 1200px;
+}
+
+
+.container-single-project{
+ width: calc(100% / 2 - 15px);
+}
+
+.container-single-project p,
+.container-single-project h4{
+  font-size: 1.3rem;
+}
+
+.project-top{
+  height: 250px;
+}
+
+
 
 }

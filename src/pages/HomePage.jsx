@@ -12,7 +12,8 @@ export default function HomePage(){
      <Navbar />
      <Hero />
      <About />
-     <InteractiveCards />
+     <Projects />
+     
      
        
        </>
