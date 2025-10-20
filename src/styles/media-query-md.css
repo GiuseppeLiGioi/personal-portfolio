@@ -162,14 +162,7 @@
   max-width: 740px;
 }
 
-.container-projects{
-  flex-direction: row;
-  flex-wrap: wrap;
-}
 
-.container-single-project{
- width: calc(100% / 2 - 15px);
-}
 
 .container-single-project p,
 .container-single-project h4{
@@ -178,8 +171,12 @@
 
 
 .project-top{
-  height: 200px;
+  height: 300px;
+}
 
+.project-top img{
+  height: 300px;
+  width: 100%;
 }
 
 

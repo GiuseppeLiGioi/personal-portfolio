@@ -429,7 +429,35 @@ li {
 }
 
 .project-top{
-  height: 120px;
-  border: 1px solid black;
+  height: 250px;
   width: 100%;
+}
+
+.project-top img{
+  height: 250px;
+  width: 100%;
+}
+
+.project-bottom{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.a-projects {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgba(71, 99, 223, 0.95);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+}
+
+.a-projects:hover {
+  background-color: rgb(5, 24, 105);
+  transform: translateY(-2px);
 }

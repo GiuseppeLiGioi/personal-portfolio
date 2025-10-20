@@ -110,9 +110,12 @@
 /*PROJECTS STYLE*/
 
 .container-projects-page{
-  max-width: 1200px;
+  max-width: 1400px;
 }
-
+.container-projects{
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 
 .container-single-project{
  width: calc(100% / 2 - 15px);
@@ -124,7 +127,12 @@
 }
 
 .project-top{
-  height: 250px;
+  height: 350px;
+}
+
+.project-top img{
+  height: 350px;
+  width: 100%;
 }
 
 
