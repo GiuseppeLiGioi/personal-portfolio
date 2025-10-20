@@ -90,6 +90,14 @@
     font-size: 1.5rem;
   }
 
+  .container-logic-interactive-top p,
+  .container-logic-interactive-bottom p,
+  .container-logic-interactive-top h3,
+  .container-logic-interactive-bottom h3 {
+    font-size: 1.5rem;
+  }
+
+
 
 
 }

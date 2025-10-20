@@ -11,6 +11,7 @@ export default function InteractiveCards() {
     const [index, setIndex] = useState(0)
     const [phrase, setPhrase] = useState("")
     const [progress, setProgress] = useState(0)
+    const [isDisabled, SetIsDisabled] = useState(false)
 
 
     const myArray = [
@@ -59,7 +60,13 @@ export default function InteractiveCards() {
     }
 
       function handlePhrase() {
-        setDarkMode(!darkMode)
+       if(index < myArray.length){
+        setPhrase(myArray[index])
+        setProgress(progress + 20)
+        setIndex(index + 1)
+       }else{
+        SetIsDisabled(true)
+       }
     }
 
 
@@ -97,24 +104,24 @@ export default function InteractiveCards() {
 
 
             <div className={darkMode ? "container-card-interactive-dark" : "container-card-interactive"} style={{ backgroundColor: bgColor }}>
-                <div className="container-logic-css">
+                <div className="container-logic-1">
                     <h3>Cambia il colore di sfondo o il tema della card!</h3>
 
+                </div>
                     <div className="container-button-interactive-css">
                         <button className="btn-interactive" onClick={() => handleColor()}>Cambia colore!</button>
                         <button className="btn-interactive" onClick={() => handleTheme()}>{darkMode ? "Tema chiaro" : "Tema scuro"}</button>
                     </div>
-                </div>
             </div>
 
 
             <div className="container-card-interactive">
-                <div className="container-logic-1">
+                <div className="container-logic-interactive-top">
                     <h3>Scopri qualcosa in più su di me 🚀</h3>
-                    <button className="btn-interactive" onClick={() => handlePhrase()}>Scopri di più</button>
+                    <p>{phrase}</p>
                 </div>
 
-                <div className="container-logic-2">
+                <div className="container-logic-interactive-bottom">
                     <div className="container-progressbar">
 
                         <div className="progressbar">
@@ -122,17 +129,17 @@ export default function InteractiveCards() {
                         </div>
 
                     </div>
+                    <button className="btn-interactive" disabled={isDisabled} onClick={() => handlePhrase()}>Scopri di più</button>
                 </div>
             </div>
 
 
-             <div className="container-card-interactive">
-                <div className="container-logic-1">
+              <div className="container-card-interactive">
+                <div className="container-logic-interactive-top">
                     <h3>Scopri qualcosa in più su di me 🚀</h3>
-                    <button className="btn-interactive" onClick={() => handlePhrase()}>Scopri di più</button>
                 </div>
 
-                <div className="container-logic-2">
+                <div className="container-logic-interactive-bottom">
                     <div className="container-progressbar">
 
                         <div className="progressbar">
@@ -140,6 +147,7 @@ export default function InteractiveCards() {
                         </div>
 
                     </div>
+                    <button className="btn-interactive" onClick={() => handlePhrase()}>Scopri di più</button>
                 </div>
             </div>
 
