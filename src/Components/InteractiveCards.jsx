@@ -118,7 +118,10 @@ export default function InteractiveCards() {
             <div className="container-card-interactive">
                 <div className="container-logic-interactive-top">
                     <h3>Scopri qualcosa in più su di me 🚀</h3>
-                    <p>{phrase}</p>
+                </div>
+                <div className="container-phrase">
+
+                    <p className="phrase-p">{phrase}</p>
                 </div>
 
                 <div className="container-logic-interactive-bottom">

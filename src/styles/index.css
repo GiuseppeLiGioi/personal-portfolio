@@ -334,5 +334,31 @@ li {
   font-size: 0.9rem;
 }
 
+.container-phrase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 120px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #e8ebff, #ffffff);
+}
+
+.container-phrase:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.phrase-p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+
+
 
 
