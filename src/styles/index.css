@@ -288,6 +288,12 @@ li {
   padding: 10px;
 }
 
+
+.container-logic-interactive-bottom{
+  min-width: 200px;
+  max-width: 400px;
+}
+
 .container-card-interactive,
 .container-card-interactive-dark {
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -356,6 +362,35 @@ li {
   color: #333;
   line-height: 1.5;
   font-style: italic;
+}
+
+/* Contenitore della progress bar */
+.container-progressbar {
+  width: 95%;
+  height: 16px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.progressbar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #4763df, #6c84ff);
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+.progress-p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+  user-select: none;
 }
 
 

@@ -143,6 +143,17 @@
     font-size: 1.1rem;
   }
 
+  
+.container-card-interactive:last-child{
+  flex: 0 0 100%;
+  margin-top: 20px;
+}
+
+.container-logic-interactive-bottom{
+  min-width: 400px;
+  max-width: 740px;
+}
+
 
 
 

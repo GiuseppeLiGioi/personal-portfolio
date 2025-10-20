@@ -100,6 +100,11 @@
     font-size: 1.2rem;
   }
 
+  .container-logic-interactive-bottom{
+  min-width: 600px;
+  max-width: 1200px;
+}
+
 
 
 

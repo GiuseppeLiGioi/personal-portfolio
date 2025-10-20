@@ -59,15 +59,28 @@ export default function InteractiveCards() {
         setDarkMode(!darkMode)
     }
 
-      function handlePhrase() {
-       if(index < myArray.length){
-        setPhrase(myArray[index])
+    function handlePhrase() {
+     if(index < myArray.length){
+      setPhrase(myArray[index])
+      setProgress(progress + 20)
+      setIndex(index + 1)
+     }else{
+      SetIsDisabled(true)
+     }
+  }
+
+
+    function handleProgress(){
+       if(progress < 100){
         setProgress(progress + 20)
-        setIndex(index + 1)
+        handlePhrase()
        }else{
-        SetIsDisabled(true)
+        setProgress(0)
+        setIndex(0)
+        setPhrase(null)
        }
     }
+
 
 
 
@@ -125,34 +138,17 @@ export default function InteractiveCards() {
                 </div>
 
                 <div className="container-logic-interactive-bottom">
+
+                    <p className="progress-p">{progress}%</p>
                     <div className="container-progressbar">
-
-                        <div className="progressbar">
-
-                        </div>
-
+                        <div className="progressbar" style={{width: `${progress}%`}}></div>
                     </div>
-                    <button className="btn-interactive" disabled={isDisabled} onClick={() => handlePhrase()}>Scopri di più</button>
                 </div>
+                    <button className="btn-interactive" onClick={() => handleProgress()}>Scopri di più</button>
             </div>
 
 
-              <div className="container-card-interactive">
-                <div className="container-logic-interactive-top">
-                    <h3>Scopri qualcosa in più su di me 🚀</h3>
-                </div>
-
-                <div className="container-logic-interactive-bottom">
-                    <div className="container-progressbar">
-
-                        <div className="progressbar">
-
-                        </div>
-
-                    </div>
-                    <button className="btn-interactive" onClick={() => handlePhrase()}>Scopri di più</button>
-                </div>
-            </div>
+              
 
 
         </div>
