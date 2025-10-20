@@ -35,7 +35,7 @@ export default function Projects() {
                             Reiciendis tempora beatae optio sapiente quos quam, corporis distinctio eos molestiae reprehenderit.
                             Consequatur qui optio id quibusdam ea quas repellendus, aspernatur rerum.
                         </p>
-                        <a href="https://github.com/tuo-progetto" target="_blank" rel="noopener noreferrer" className="a-projects">
+                        <a href="https://github.com/GiuseppeLiGioi/personal-finance-dashboard" target="_blank" rel="noopener noreferrer" className="a-projects">
                             Apri su GitHub
                         </a>
                     </div>
@@ -55,7 +55,7 @@ export default function Projects() {
                             Reiciendis tempora beatae optio sapiente quos quam, corporis distinctio eos molestiae reprehenderit.
                             Consequatur qui optio id quibusdam ea quas repellendus, aspernatur rerum.
                         </p>
-                        <a href="https://github.com/tuo-progetto" target="_blank" rel="noopener noreferrer" className="a-projects">
+                        <a href="https://github.com/GiuseppeLiGioi/kick-shop" target="_blank" rel="noopener noreferrer" className="a-projects">
                             Apri su GitHub
                         </a>
                     </div>
@@ -74,7 +74,7 @@ export default function Projects() {
                             Reiciendis tempora beatae optio sapiente quos quam, corporis distinctio eos molestiae reprehenderit.
                             Consequatur qui optio id quibusdam ea quas repellendus, aspernatur rerum.
                         </p>
-                        <a href="https://github.com/tuo-progetto" target="_blank" rel="noopener noreferrer" className="a-projects">
+                        <a href="https://github.com/GiuseppeLiGioi/campo-minato" target="_blank" rel="noopener noreferrer" className="a-projects">
                             Apri su GitHub
                         </a>
                     </div>

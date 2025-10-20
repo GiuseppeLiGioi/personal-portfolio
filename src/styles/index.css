@@ -129,7 +129,7 @@ li {
 }
 
 .box-about{
-  background-color: rgb(219, 217, 217);
+  background-color:#f1f1f1da;
   border-radius: 20px;
   padding: 30px;
   max-width: 600px;
@@ -424,8 +424,8 @@ li {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  border: 1px solid green;
   padding: 10px;
+  background-color: #f1f1f1da;
 }
 
 .project-top{
