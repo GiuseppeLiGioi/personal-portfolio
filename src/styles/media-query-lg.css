@@ -136,5 +136,43 @@
 }
 
 
+/*FOOTER STYLE*/
+.container-footer {
+  max-width: 1200px;  
+}
+.title-contact {
+  font-size: 2.2rem;
+}
+
+
+.container-contacts{
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+
+.container-info{
+  max-width: 1200px;
+}
+
+.container-platforms{
+  max-width: 1200px;
+}
+
+.p-contact {
+  font-size: 1.1rem;
+}
+
+a[href^="tel:"],
+a[href^="mailto:"] {
+  font-size: 1.2rem;
+}
+
+
+
+.container-platforms a.a-contact {
+  font-size: 1.2rem;
+}
+
 
 }
