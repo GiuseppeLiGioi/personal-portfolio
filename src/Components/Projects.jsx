@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+
 export default function Projects() {
     return (
 
@@ -20,7 +23,7 @@ export default function Projects() {
                             Consequatur qui optio id quibusdam ea quas repellendus, aspernatur rerum.
                         </p>
                         <a href="https://github.com/GiuseppeLiGioi/gym-card" target="_blank" rel="noopener noreferrer" className="a-projects">
-                            Apri su GitHub
+                            <span><FontAwesomeIcon icon={faGithub} /></span> Apri su GitHub
                         </a>
                     </div>
                 </div>
@@ -38,7 +41,7 @@ export default function Projects() {
                             Consequatur qui optio id quibusdam ea quas repellendus, aspernatur rerum.
                         </p>
                         <a href="https://github.com/GiuseppeLiGioi/personal-finance-dashboard" target="_blank" rel="noopener noreferrer" className="a-projects">
-                            Apri su GitHub
+                           <span><FontAwesomeIcon icon={faGithub} /></span> Apri su GitHub
                         </a>
                     </div>
                 </div>
@@ -58,7 +61,7 @@ export default function Projects() {
                             Consequatur qui optio id quibusdam ea quas repellendus, aspernatur rerum.
                         </p>
                         <a href="https://github.com/GiuseppeLiGioi/kick-shop" target="_blank" rel="noopener noreferrer" className="a-projects">
-                            Apri su GitHub
+                            <span><FontAwesomeIcon icon={faGithub} /></span> Apri su GitHub
                         </a>
                     </div>
                 </div>
@@ -77,7 +80,7 @@ export default function Projects() {
                             Consequatur qui optio id quibusdam ea quas repellendus, aspernatur rerum.
                         </p>
                         <a href="https://github.com/GiuseppeLiGioi/campo-minato" target="_blank" rel="noopener noreferrer" className="a-projects">
-                            Apri su GitHub
+                            <span><FontAwesomeIcon icon={faGithub} /></span> Apri su GitHub
                         </a>
                     </div>
                 </div>

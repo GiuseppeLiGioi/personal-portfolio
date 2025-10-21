@@ -12,7 +12,7 @@ html {
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.5;
-  color: #111;
+  color: #585858;
   background-color: #fff;
 }
 
@@ -163,7 +163,7 @@ li {
 }
 
 .hero-divider {
-  border: 0.1rem solid rgb(88, 88, 88);
+  border: 0.1rem solid rgba(71, 99, 223, 0.7);
   width: 85%;
   margin: 30px 0;
 }
@@ -428,6 +428,10 @@ li {
   gap: 10px;
   padding: 10px;
   background-color: #f1f1f1da;
+}
+
+.container-single-project h4{
+  color: rgba(71, 99, 223, 0.95);
 }
 
 .project-top {
