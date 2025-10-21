@@ -143,79 +143,99 @@
     font-size: 1.1rem;
   }
 
-  
-.container-card-interactive:last-child{
-  flex: 0 0 100%;
-  margin-top: 20px;
-}
 
-.container-logic-interactive-bottom{
-  min-width: 400px;
-  max-width: 740px;
-}
+  .container-card-interactive:last-child {
+    flex: 0 0 100%;
+    margin-top: 20px;
+  }
 
+  .container-logic-interactive-bottom {
+    min-width: 400px;
+    max-width: 740px;
+  }
 
-
-/*PROJECTS STYLE*/
-
-.container-projects-page{
-  max-width: 740px;
-}
+  .p-interactive {
+    max-width: 740px;
+  }
 
 
+  .title-interactive {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-size: 2.0rem;
+  }
 
-.container-single-project p,
-.container-single-project h4{
-  font-size: 1.1rem;
-}
 
+  /*PROJECTS STYLE*/
 
-.project-top{
-  height: 300px;
-}
-
-.project-top img{
-  height: 300px;
-  width: 100%;
-}
+  .container-projects-page {
+    max-width: 740px;
+  }
 
 
 
-/*FOOTER STYLE*/
-.container-footer {
-  max-width: 740px;  
-}
-.title-contact {
-  font-size: 2.0rem;
-}
+  .container-single-project p,
+  .container-single-project h4 {
+    font-size: 1.1rem;
+  }
 
 
-.container-contacts{
-  max-width: 740px;
-  margin: 25px auto;
-}
+  .project-top {
+    height: 300px;
+  }
 
-
-.container-info{
-  max-width: 700px;
-}
-
-.container-platforms{
-  max-width: 700px;
-}
-
-.p-contact {
-  font-size: 1.1rem;
-}
-
-a[href^="tel:"],
-a[href^="mailto:"] {
-  font-size: 1.1rem;
-}
+  .project-top img {
+    height: 300px;
+    width: 100%;
+  }
 
 
 
-.container-platforms a.a-contact {
-  font-size: 1.1rem;
-}
+  /*FOOTER STYLE*/
+
+  .container-footer {
+    max-width: 740px;
+    padding: 15px;
+  }
+
+
+
+  .container-contacts {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: start;
+    padding: 15px;
+    max-width: 740px;
+  }
+
+
+  .container-info {
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 700px;
+  }
+
+  .container-platforms {
+    flex-direction: column;
+    gap: 25px;
+    max-width: 300px;
+  }
+
+  .title-contact {
+    font-size: 2.0rem;
+    text-align: center;
+  }
+
+  a[href^="tel:"],
+  a[href^="mailto:"] {
+    font-size: 1.1rem;
+  }
+
+  .container-platforms a.a-contact {
+    font-size: 1.1rem;
+  }
+
+
 }

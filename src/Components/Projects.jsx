@@ -1,6 +1,8 @@
 export default function Projects() {
     return (
 
+         <section id="projects">
+
         <div className="container-projects-page">
             <h2 className="title-about">I MIEI PROGETTI</h2>
 
@@ -84,5 +86,7 @@ export default function Projects() {
             </div>
 
         </div>
+        </section>
+
     )
 }

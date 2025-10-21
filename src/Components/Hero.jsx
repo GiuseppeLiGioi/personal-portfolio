@@ -1,5 +1,7 @@
 export default function Hero(){
     return(
+        <section id="hero">
+
         <div className="container-hero">
             <div className="container-img-hero">
                <img src="/logo-portfolio.png" alt="Foto Personale"/>
@@ -12,10 +14,11 @@ export default function Hero(){
                 Voluptates nihil nemo quod facere quasi repellat nostrum dolore sint quam? Quidem aspernatur libero dolore pariatur ipsum quos enim tempora! Laboriosam, eum!
                 </p>
 
-                <button className="btn-hero">
+                <a className="btn-hero" href="#projects">
                    Scopri i miei Progetti
-                </button>
+                </a>
             </div>
         </div>
+        </section>
     )
 }

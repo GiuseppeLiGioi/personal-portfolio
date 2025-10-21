@@ -105,6 +105,16 @@
   max-width: 1200px;
 }
 
+.p-interactive{
+  max-width: 1200px; 
+}
+
+.title-interactive {
+  width: 100%;     
+  text-align: center; 
+  font-size: 2.2rem;
+}
+
 
 
 /*PROJECTS STYLE*/
@@ -138,37 +148,31 @@
 
 /*FOOTER STYLE*/
 .container-footer {
-  max-width: 1200px;  
+  max-width: 1200px;
 }
-.title-contact {
-  font-size: 2.2rem;
-}
+
 
 
 .container-contacts{
   max-width: 1200px;
-  margin: 30px auto;
 }
 
 
 .container-info{
-  max-width: 1200px;
+  max-width: 800px;
 }
 
 .container-platforms{
-  max-width: 1200px;
+  max-width: 400px;
 }
-
-.p-contact {
-  font-size: 1.1rem;
+.title-contact {
+  font-size: 2.2rem;
 }
 
 a[href^="tel:"],
 a[href^="mailto:"] {
   font-size: 1.2rem;
 }
-
-
 
 .container-platforms a.a-contact {
   font-size: 1.2rem;
