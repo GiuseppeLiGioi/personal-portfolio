@@ -43,7 +43,6 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: fadeInSlide 0.8s ease-out forwards;
   padding: 10px;
   border-radius: 10px;
 }
@@ -74,17 +73,7 @@ li {
   color: rgb(16, 10, 65);
 }
 
-@keyframes fadeInSlide {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
 
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 
 
@@ -145,19 +134,9 @@ li {
   padding: 30px;
   max-width: 600px;
   margin: 80px auto;
-
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeUp 0.8s ease-out forwards;
 }
 
 
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 /*HERO STYLE*/
 .container-hero {
@@ -169,11 +148,6 @@ li {
   margin: 0 auto;
   text-align: center;
   padding-top: 230px;
-
-  opacity: 0;
-  transform: translateY(30px);
-  animation: heroFadeIn 1s ease forwards;
-  animation-delay: 0.2s;
 }
 
 .container-img-hero img {
@@ -221,12 +195,6 @@ li {
   background-color: rgb(5, 24, 105);
 }
 
-@keyframes heroFadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 
 /*INTERACTIVE STYLE*/
@@ -601,6 +569,26 @@ span.span-contact {
   background-color: rgb(5, 24, 105);
   transform: translateY(-2px);
 }
+
+/*ANIMAZIONE GENERALE D'INGRESSO RIUTILIZZAZBILE*/
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); 
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  opacity: 0; 
+  animation: fadeInUp 0.8s ease forwards; 
+  animation-delay: 0.4s;
+}
+
 
 
 

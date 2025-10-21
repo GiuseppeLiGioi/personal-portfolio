@@ -2,14 +2,14 @@ export default function About(){
     return(
         <section id="about" className="container-about">
 
-        <div className="about-inner">
+        <div className="about-inner fade-in-up">
         <h2 className="title-about">About Me</h2>
         <p className="description-about">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum facilis, pariatur sapiente dicta non illo dignissimos consequuntur ullam nihil 
         voluptas iste reprehenderit quisquam, eaque fugiat cum beatae, a quam minima.
         </p>
         </div>
 
-        <div className="box-about">
+        <div className="box-about fade-in-up">
 
         <div className="about-bottom-front">
             <h3 className="title-skills">Stack Tecnologico Frontend</h3>

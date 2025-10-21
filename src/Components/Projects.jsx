@@ -3,7 +3,7 @@ export default function Projects() {
 
          <section id="projects">
 
-        <div className="container-projects-page">
+        <div className="container-projects-page fade-in-up">
             <h2 className="title-about">I MIEI PROGETTI</h2>
 
             <div className="container-projects">

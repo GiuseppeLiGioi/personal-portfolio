@@ -6,7 +6,7 @@ export default function ContactFooter() {
     return (
          <section id="contact">
 
-        <div className="container-footer">
+        <div className="container-footer fade-in-up">
             <h2 className="title-contact">RECAPITI E PIATTAFORME</h2>
             <p className="description-footer">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Non perferendis odio dolorem consequatur molestiae error dicta itaque nisi, repellendus harum possimus sequi saepe. Modi ea iure optio soluta, animi dolor.

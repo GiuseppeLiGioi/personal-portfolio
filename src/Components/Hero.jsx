@@ -2,7 +2,7 @@ export default function Hero(){
     return(
         <section id="hero">
 
-        <div className="container-hero">
+        <div className="container-hero fade-in-up">
             <div className="container-img-hero">
                <img src="/logo-portfolio.png" alt="Foto Personale"/>
             </div>
