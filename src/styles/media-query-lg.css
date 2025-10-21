@@ -70,8 +70,9 @@
 
  /*INTERACTIVE STYLE*/
   .container-interactive {
-    gap: 40px;
+    gap: 20px;
     max-width: 1200px; 
+    padding: 20px;
   }
 
   .container-card-interactive,
