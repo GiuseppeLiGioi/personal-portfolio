@@ -127,7 +127,7 @@ export default function InteractiveCards() {
 
             <div className={darkMode ? "container-card-interactive-dark" : "container-card-interactive"} style={{ backgroundColor: bgColor }}>
                 <div className="container-logic-1">
-                    <h3 className="title-card-interactive">🎨 Cambia il colore di sfondo o il tema della card! 🎨</h3>
+                    <h3 className={darkMode ? "title-card-interactive-dark" : "title-card-interactive"}>🎨 Cambia il colore di sfondo o il tema della card! 🎨</h3>
 
                 </div>
                 <div className="container-button-interactive-css">

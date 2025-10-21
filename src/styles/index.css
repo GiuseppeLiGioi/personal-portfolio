@@ -294,6 +294,11 @@ li {
   color: rgb(5, 24, 105);
 }
 
+.title-card-interactive-dark{
+  color: white;
+  text-align: center;
+}
+
 
 
 .container-logic-interactive-bottom {
@@ -442,7 +447,7 @@ li {
   border-radius: 10px;
 }
 
-.container-single-project h3 {
+.container-single-project h4 {
   color: rgba(71, 99, 223, 0.95);
 }
 
