@@ -56,29 +56,34 @@ export default function InteractiveCards() {
     }
 
     function handleTheme() {
-        setDarkMode(!darkMode)
+        if (!darkMode) {
+            setBgColor("#1a1919");
+        } else {
+            setBgColor("#fff"); 
+        }
+        setDarkMode(!darkMode);
     }
 
     function handlePhrase() {
-     if(index < myArray.length){
-      setPhrase(myArray[index])
-      setProgress(progress + 20)
-      setIndex(index + 1)
-     }else{
-      SetIsDisabled(true)
-     }
-  }
+        if (index < myArray.length) {
+            setPhrase(myArray[index])
+            setProgress(progress + 20)
+            setIndex(index + 1)
+        } else {
+            SetIsDisabled(true)
+        }
+    }
 
 
-    function handleProgress(){
-       if(progress < 100){
-        setProgress(progress + 20)
-        handlePhrase()
-       }else{
-        setProgress(0)
-        setIndex(0)
-        setPhrase(null)
-       }
+    function handleProgress() {
+        if (progress < 100) {
+            setProgress(progress + 20)
+            handlePhrase()
+        } else {
+            setProgress(0)
+            setIndex(0)
+            setPhrase(null)
+        }
     }
 
 
@@ -89,8 +94,8 @@ export default function InteractiveCards() {
     return (
         <div className="container-interactive fade-in-up">
             <h2 className="title-interactive">TITOLO INTERACTIVE</h2>
-            <p className="p-interactive">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-            Iusto blanditiis, eligendi at pariatur minima error saepe voluptas possimus quaerat minus ad, assumenda velit eum ipsum deserunt explicabo, architecto iste libero.
+            <p className="p-interactive">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Iusto blanditiis, eligendi at pariatur minima error saepe voluptas possimus quaerat minus ad, assumenda velit eum ipsum deserunt explicabo, architecto iste libero.
             </p>
 
 
@@ -125,10 +130,10 @@ export default function InteractiveCards() {
                     <h3 className="title-card-interactive">🎨 Cambia il colore di sfondo o il tema della card! 🎨</h3>
 
                 </div>
-                    <div className="container-button-interactive-css">
-                        <button className="btn-interactive" onClick={() => handleColor()}>Cambia colore!</button>
-                        <button className="btn-interactive" onClick={() => handleTheme()}>{darkMode ? "Tema chiaro" : "Tema scuro"}</button>
-                    </div>
+                <div className="container-button-interactive-css">
+                    <button className="btn-interactive" onClick={() => handleColor()}>Cambia colore!</button>
+                    <button className="btn-interactive" onClick={() => handleTheme()}>{darkMode ? "Tema chiaro" : "Tema scuro"}</button>
+                </div>
             </div>
 
 
@@ -145,14 +150,14 @@ export default function InteractiveCards() {
 
                     <p className="progress-p">{progress}%</p>
                     <div className="container-progressbar">
-                        <div className="progressbar" style={{width: `${progress}%`}}></div>
+                        <div className="progressbar" style={{ width: `${progress}%` }}></div>
                     </div>
                 </div>
-                    <button className="btn-interactive" onClick={() => handleProgress()}>Scopri di più</button>
+                <button className="btn-interactive" onClick={() => handleProgress()}>Scopri di più</button>
             </div>
 
 
-              
+
 
 
         </div>

@@ -276,7 +276,7 @@ li {
   margin: 0 auto;
   border-radius: 10px;
   background-color: rgb(26, 25, 25);
-  color: white;
+  color: white !important;
   padding: 10px;
 }
 
@@ -442,7 +442,7 @@ li {
   border-radius: 10px;
 }
 
-.container-single-project h4 {
+.container-single-project h3 {
   color: rgba(71, 99, 223, 0.95);
 }
 
