@@ -96,14 +96,14 @@ export default function InteractiveCards() {
 
             <div className="container-card-interactive">
                 <div className="container-logic-1">
-                    <h3 className="title-card-interactive">Generatore Numero Casuale 0-100:</h3>
+                    <h3 className="title-card-interactive">🎲 Generatore Numero Casuale 0-100: 🎲</h3>
                     <button className="btn-interactive" onClick={() => handleGenerate()}>Genera!</button>
                     <p>{casualNum ? `Numero: ${casualNum}` : ""}</p>
                 </div>
 
                 <div className="container-logic-2">
 
-                    <h3 className="title-card-interactive">Indovina il numero casuale 0-50!</h3>
+                    <h3 className="title-card-interactive">🎲 Indovina il numero casuale 0-50! 🎲</h3>
                     <input
                         type="number"
                         placeholder="Digita il numero e scopri se è corretto"
@@ -122,7 +122,7 @@ export default function InteractiveCards() {
 
             <div className={darkMode ? "container-card-interactive-dark" : "container-card-interactive"} style={{ backgroundColor: bgColor }}>
                 <div className="container-logic-1">
-                    <h3 className="title-card-interactive">Cambia il colore di sfondo o il tema della card!</h3>
+                    <h3 className="title-card-interactive">🎨 Cambia il colore di sfondo o il tema della card! 🎨</h3>
 
                 </div>
                     <div className="container-button-interactive-css">
@@ -134,7 +134,7 @@ export default function InteractiveCards() {
 
             <div className="container-card-interactive">
                 <div className="container-logic-interactive-top">
-                    <h3 className="title-card-interactive">Scopri qualcosa in più su di me 🚀</h3>
+                    <h3 className="title-card-interactive">👨🏼‍💻 Scopri qualcosa in più su di me 🚀</h3>
                 </div>
                 <div className="container-phrase">
 

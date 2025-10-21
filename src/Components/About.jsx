@@ -3,7 +3,7 @@ export default function About(){
         <section id="about" className="container-about">
 
         <div className="about-inner fade-in-up">
-        <h2 className="title-about">About Me</h2>
+        <h2 className="title-about">ABOUT ME</h2>
         <p className="description-about">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum facilis, pariatur sapiente dicta non illo dignissimos consequuntur ullam nihil 
         voluptas iste reprehenderit quisquam, eaque fugiat cum beatae, a quam minima.
         </p>
