@@ -110,6 +110,7 @@ li {
 .title-about {
   font-size: 1.8rem;
   margin-bottom: 20px;
+  color: rgba(71, 99, 223, 0.95);
 }
 
 .description-about {
@@ -131,14 +132,15 @@ li {
 
 .span-skill {
   display: inline-block;
-  background-color: rgba(71, 99, 223, 0.2);
+  background-color: rgba(71, 99, 223, 0.95);
   padding: 5px 10px;
   border-radius: 5px;
   margin: 5px;
+  color: white;
 }
 
 .box-about {
-  background-color: #f1f1f1da;
+  background-color: rgba(71, 99, 223, 0.20);
   border-radius: 20px;
   padding: 30px;
   max-width: 600px;
@@ -512,6 +514,7 @@ li {
 .title-contact {
   font-size: 1.8rem;
   margin: 10px 0;
+  color: rgba(71, 99, 223, 0.95);
 }
 
 
