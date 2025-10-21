@@ -161,6 +161,21 @@ li {
   padding-top: 230px;
 }
 
+.container-img-name{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.name-user{
+  font-size: 1.8rem;
+}
+
+.name-profession{
+  font-size: 1.1rem;
+}
+
 .container-img-hero img {
   width: 160px;
   height: auto;

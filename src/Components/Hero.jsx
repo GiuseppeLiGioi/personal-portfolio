@@ -3,8 +3,18 @@ export default function Hero(){
         <section id="hero">
 
         <div className="container-hero fade-in-up">
+
+
+            <div className="container-img-name">
             <div className="container-img-hero">
                <img src="/logo-portfolio.png" alt="Foto Personale"/>
+            </div>
+
+            <div className="container-profession-hero">
+                <h2 className="name-user">Giuseppe Li Gioi</h2>
+                <h4 className="name-profession"><strong>Jr. Full-Stack Web Developer</strong></h4>
+            </div>
+
             </div>
 
             <div className="hero-divider"></div>

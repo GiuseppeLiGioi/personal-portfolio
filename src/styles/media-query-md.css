@@ -69,9 +69,27 @@
     gap: 70px;
   }
 
+  .container-profession-hero{
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 100%;
+    min-width: 230px;
+    gap: 5px;
+  }
+
+  .name-user{
+  font-size: 1.8rem;
+}
+
+.name-profession{
+  font-size: 1rem;
+}
+
+
   .container-img-hero img {
     width: 200px;
     margin-bottom: 0px;
+    margin-right: 10px;
   }
 
   .hero-divider {
@@ -93,6 +111,7 @@
   .btn-hero {
     border-radius: 10px;
     padding: 15px;
+    margin-top: 50px;
   }
 
 
@@ -240,9 +259,9 @@
     font-size: 1.1rem;
   }
 
-  .description-footer{
-  font-size: 1.1rem;
-}
+  .description-footer {
+    font-size: 1.1rem;
+  }
 
 
 }
