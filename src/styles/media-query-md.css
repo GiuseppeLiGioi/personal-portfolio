@@ -86,6 +86,8 @@
 
   .container-hero-info p {
     font-size: 1.2rem;
+    text-align: initial;
+    margin-right: 30px;
   }
 
   .btn-hero {
@@ -156,6 +158,7 @@
 
   .p-interactive {
     max-width: 740px;
+    font-size: 1.1rem;
   }
 
 
@@ -237,6 +240,10 @@
   .container-platforms a.a-contact {
     font-size: 1.1rem;
   }
+
+  .description-footer{
+  font-size: 1.1rem;
+}
 
 
 }

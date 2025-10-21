@@ -106,7 +106,8 @@
 }
 
 .p-interactive{
-  max-width: 1200px; 
+  max-width: 1200px;
+  font-size: 1.2rem; 
 }
 
 .title-interactive {
@@ -175,6 +176,10 @@ a[href^="mailto:"] {
 }
 
 .container-platforms a.a-contact {
+  font-size: 1.2rem;
+}
+
+  .description-footer{
   font-size: 1.2rem;
 }
 
