@@ -4,9 +4,9 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 export default function ContactFooter() {
     return (
-        <section id="contact">
+        <section id="contact" className="fade-in-up">
 
-            <div className="container-footer fade-in-up">
+            <div className="container-footer">
                 <h2 className="title-contact">RECAPITI E PIATTAFORME</h2>
                 <p className="description-footer">
                     Per metterti in contatto con me o conoscere meglio il mio percorso, in questa sezione trovi la mia residenza, i miei recapiti, il mio CV scaricabile in PDF e i link alle mie piattaforme professionali.

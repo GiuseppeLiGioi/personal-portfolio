@@ -103,7 +103,7 @@ export default function InteractiveCards() {
                 <div className="container-logic-1">
                     <h3 className="title-card-interactive">🎲 Generatore Numero Casuale 0-100: 🎲</h3>
                     <button className="btn-interactive" onClick={() => handleGenerate()}>Genera!</button>
-                    <p>{casualNum ? `Numero: ${casualNum}` : ""}</p>
+                    <p className="p-casual-num">{casualNum ? `Numero: ${casualNum}` : ""}</p>
                 </div>
 
                 <div className="container-logic-2">
@@ -120,7 +120,7 @@ export default function InteractiveCards() {
                         <button className="btn-interactive" onClick={() => handleVerify(Number(numUser))}>Verifica</button>
                         <button className="btn-interactive" onClick={() => handleReset()}>Reset Gioco</button>
                     </div>
-                    <p>{feedback}</p>
+                    <p className="p-feedback-num">{feedback}</p>
                 </div>
             </div>
 

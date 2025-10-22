@@ -4,9 +4,9 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 export default function Projects() {
     return (
 
-         <section id="projects">
+         <section id="projects" className="fade-in-up">
 
-        <div className="container-projects-page fade-in-up">
+        <div className="container-projects-page">
             <h2 className="title-about">I MIEI PROGETTI</h2>
 
             <div className="container-projects">

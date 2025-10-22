@@ -319,6 +319,25 @@ li {
   text-align: center;
 }
 
+.p-casual-num {
+  font-size: 2rem;
+  font-weight: 600;
+  color: rgba(71, 99, 223, 0.95);
+  text-align: center;
+  margin: 15px 0;
+}
+
+
+.p-feedback-num {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: rgba(71, 99, 223, 0.95);
+  text-align: center;
+  margin: 10px 0;
+  min-height: 24px; 
+  transition: color 0.3s ease;
+}
+
 
 
 .container-logic-interactive-bottom {
@@ -649,6 +668,11 @@ span.span-contact {
 
 /*ANIMAZIONE GENERALE D'INGRESSO RIUTILIZZAZBILE*/
 
+.fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.4s;
+}
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -659,10 +683,4 @@ span.span-contact {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.fade-in-up {
-  opacity: 0;
-  animation: fadeInUp 0.8s ease forwards;
-  animation-delay: 0.4s;
 }

@@ -1,8 +1,8 @@
 export default function About(){
     return(
-        <section id="about" className="container-about">
+        <section id="about" className="container-about fade-in-up">
 
-        <div className="about-inner fade-in-up">
+        <div className="about-inner">
         <h2 className="title-about">ABOUT ME</h2>
         <p className="description-about">
             La mia passione per l'informatica nasce circa sei anni fa, alle scuole superiori, quando decisi di frequentare ed impegnarmi per conseguire il diploma nel medesimo corso.<br/>
