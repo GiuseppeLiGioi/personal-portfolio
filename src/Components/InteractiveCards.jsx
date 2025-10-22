@@ -93,9 +93,9 @@ export default function InteractiveCards() {
 
     return (
         <div className="container-interactive fade-in-up">
-            <h2 className="title-interactive">TITOLO INTERACTIVE</h2>
-            <p className="p-interactive">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Iusto blanditiis, eligendi at pariatur minima error saepe voluptas possimus quaerat minus ad, assumenda velit eum ipsum deserunt explicabo, architecto iste libero.
+            <h2 className="title-interactive">INTERAGISCI E SCOPRI</h2>
+            <p className="p-interactive">
+                Per riportare qualcosa di concreto all'interno del mio portfolio, in questa sezione ho implementato delle piccole logiche interattive con Javascript che, ti consentiranno allo stesso tempo, di scoprire qualcosa in più su di me.  
             </p>
 
 

@@ -8,8 +8,8 @@ export default function ContactFooter() {
 
             <div className="container-footer fade-in-up">
                 <h2 className="title-contact">RECAPITI E PIATTAFORME</h2>
-                <p className="description-footer">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Non perferendis odio dolorem consequatur molestiae error dicta itaque nisi, repellendus harum possimus sequi saepe. Modi ea iure optio soluta, animi dolor.
+                <p className="description-footer">
+                    Per metterti in contatto con me o conoscere meglio il mio percorso, in questa sezione trovi la mia residenza, i miei recapiti, il mio CV scaricabile in PDF e i link alle mie piattaforme professionali.
                 </p>
 
                 <div className="container-contacts">
