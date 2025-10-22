@@ -4,8 +4,10 @@ export default function About(){
 
         <div className="about-inner fade-in-up">
         <h2 className="title-about">ABOUT ME</h2>
-        <p className="description-about">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum facilis, pariatur sapiente dicta non illo dignissimos consequuntur ullam nihil 
-        voluptas iste reprehenderit quisquam, eaque fugiat cum beatae, a quam minima.
+        <p className="description-about">
+            La mia passione per l'informatica nasce circa sei anni fa, alle scuole superiori, quando decisi di frequentare ed impegnarmi per conseguire il diploma nel medesimo corso.<br/>
+            Terminata la scuola, spinto dalla forte curiosità per la programmazione, ho deciso di iscrivermi a "Boolean" completando un corso intensivo di 600 ore che mi ha concesso di acquisire solide competenze su React, Node ed Express. <br />
+            Inoltre ho conseguito una specializzazione, prevista dallo stesso corso, in Frontend-React.Js
         </p>
         </div>
 
