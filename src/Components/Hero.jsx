@@ -23,7 +23,7 @@ export default function Hero(){
             <div className="hero-divider"></div>
 
             <div className="container-hero-info">
-                <p>Ciao! Sono Giuseppe Li Gioi, ho vent'anni e sono uno sviluppatore web Jr. full-stack. Adoro concretizzare le mie <strong>IDE</strong>e attraverso il codice, creando siti web ed interfacce utente.<br />
+                <p>Ciao! Sono Giuseppe Li Gioi, ho vent'anni e sono uno sviluppatore web Jr. full-stack. Sempre stimolato dal desiderio di concretizzare le mie <strong>IDE</strong>e attraverso il codice, creando siti web ed interfacce utente.<br />
                    Ogni giorno cerco di migliorarmi, imparando dai miei errori e sperimentando nuove tecnologie: questa è, secondo me, la chiave per crescere costantemente come sviluppatore.  
                 </p>
 
