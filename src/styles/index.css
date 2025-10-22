@@ -568,13 +568,34 @@ li {
 .container-platforms {
 
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 15px;
 
   width: 95%;
   max-width: 600px;
   margin: 0 auto;
+}
+
+.container-professional-platforms{
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 10px;
+width: 100%;
+}
+
+.container-cv{
+  width: 100%;
+}
+.container-cv a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  background-color: #db8383 !important;
 }
 
 

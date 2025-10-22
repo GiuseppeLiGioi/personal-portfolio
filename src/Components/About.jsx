@@ -38,7 +38,7 @@ export default function About(){
         </div>
 
 
-        <div className="box-about">
+        <div className="box-about fade-in-up">
 
         <div className="about-bottom-back">
             <h3 className="title-skills">Stack Tecnologico Backend</h3>
