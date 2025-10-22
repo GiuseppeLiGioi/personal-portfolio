@@ -18,9 +18,9 @@ export default function Projects() {
 
                     <div className="project-bottom">
                         <h4><strong>PULSEFIT</strong></h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Reiciendis tempora beatae optio sapiente quos quam, corporis distinctio eos molestiae reprehenderit.
-                            Consequatur qui optio id quibusdam ea quas repellendus, aspernatur rerum.
+                        <p>
+                            Una web app full-stack pensata per il fitness. Permette di crare ed interagire con schede, esercizi e progressi in modo semplice e intuitivo.<br />
+                            Include autenticazione sicura, CRUD completo per schede ed esercizi, supporto immagini, tracciamento dei progressi e simulazione di pagamenti con Stripe.
                         </p>
                         <a href="https://github.com/GiuseppeLiGioi/gym-card" target="_blank" rel="noopener noreferrer" className="a-projects">
                             <span><FontAwesomeIcon icon={faGithub} /></span> Apri su GitHub
@@ -36,9 +36,9 @@ export default function Projects() {
 
                     <div className="project-bottom">
                         <h4><strong>FINANCE-DASHBOARD</strong></h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Reiciendis tempora beatae optio sapiente quos quam, corporis distinctio eos molestiae reprehenderit.
-                            Consequatur qui optio id quibusdam ea quas repellendus, aspernatur rerum.
+                        <p>
+                            Una web app, lato Frontend, responsive per monitorare il proprio saldo in maniera professionale. Include tracciamento grafico di entrate e uscite con la possbilità di filtrarle per nome, tipo e intervallo di date. <br/>
+                            Inoltre potrai personalizzare le impostazioni, tema chiaro/scuro, multilingua e supporto per l’esportazione e l’importazione dei dati in formato CSV.
                         </p>
                         <a href="https://github.com/GiuseppeLiGioi/personal-finance-dashboard" target="_blank" rel="noopener noreferrer" className="a-projects">
                            <span><FontAwesomeIcon icon={faGithub} /></span> Apri su GitHub
