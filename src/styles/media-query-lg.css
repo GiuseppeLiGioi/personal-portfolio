@@ -68,7 +68,12 @@
 
 
 .container-hero-info p{
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.btn-hero{
+ margin-bottom:0;
+ margin-top: 20px;
 }
 
 
