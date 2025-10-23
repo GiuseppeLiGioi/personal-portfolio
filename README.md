@@ -1,4 +1,4 @@
-# 👨‍💻Giuseppe Li Gioi – Personal Portfolio
+# 👨🏼‍💻Giuseppe Li Gioi – Personal Portfolio
 
 Benvenuto nel mio portfolio personale! 💻  
 Qui puoi scoprire **chi sono**, **cosa faccio** e alcuni dei miei progetti personali che ho sviluppato come **Junior Full-Stack Web Developer**.
@@ -22,7 +22,7 @@ Include:
 
 **Frontend:** React, JSX, CSS3.  
 **Backend:** Node.js, Express.js *(nei progetti full-stack)*  
-**Altro:** FontAwesome per le icone, leggere animazioni CSS personalizzate su scroll e render, layout responsive.
+**Altro:** FontAwesome per le icone, leggere animazioni CSS su scroll e render, layout responsive.
 
 ---
 
@@ -44,7 +44,7 @@ Puoi contattarmi o cono0scermi meglio tramite:
 -  **Telefono:** +39 340 323 1407   
 -  [**GitHub**](https://github.com/GiuseppeLiGioi)  
 -  [**LinkedIn**](https://www.linkedin.com/in/giuseppe-li-gioi-327b78378)  
--  **Scarica il mio CV** direttamente dal footer del portfolio  
+-  **Scarica il mio CV** in formato PDF direttamente dall'ultima sezione del mio portfolio  
 
 
 
