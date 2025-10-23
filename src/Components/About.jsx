@@ -3,7 +3,7 @@ export default function About(){
         <section id="about" className="container-about fade-in-up">
 
         <div className="about-inner">
-        <h2 className="title-about">ABOUT ME</h2>
+        <h2 className="title-about">PROFILO</h2>
         <p className="description-about">
             La mia passione per l'informatica nasce circa sei anni fa, alle scuole superiori, quando decisi di frequentare ed impegnarmi per conseguire il diploma nel medesimo corso.<br/>
             Terminata la scuola, spinto dalla forte curiosità per la programmazione, ho deciso di iscrivermi a "Boolean" completando un corso intensivo di 600 ore che mi ha concesso di acquisire solide competenze su React, Node ed Express. <br />

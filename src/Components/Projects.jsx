@@ -19,7 +19,7 @@ export default function Projects() {
                     <div className="project-bottom">
                         <h4><strong>PULSEFIT</strong></h4>
                         <p>
-                            Una web app full-stack pensata per il fitness. Permette di crare ed interagire con schede, esercizi e progressi in modo semplice e intuitivo.<br />
+                            Una web app full-stack pensata per il fitness. Permette di creare ed interagire con schede, esercizi e progressi in modo semplice e intuitivo.<br />
                             Include autenticazione sicura, CRUD completo per schede ed esercizi, supporto immagini, tracciamento dei progressi e simulazione di pagamenti con Stripe.
                         </p>
                         <a href="https://github.com/GiuseppeLiGioi/gym-card" target="_blank" rel="noopener noreferrer" className="a-projects">
