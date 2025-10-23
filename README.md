@@ -44,7 +44,7 @@ Puoi contattarmi o cono0scermi meglio tramite:
 -  **Telefono:** +39 340 323 1407   
 -  [**GitHub**](https://github.com/GiuseppeLiGioi)  
 -  [**LinkedIn**](https://www.linkedin.com/in/giuseppe-li-gioi-327b78378)  
--  **Scarica il mio CV** direttamente dal footer del portfolio  
+-  **Scarica il mio CV** in formato PDF direttamente dall'ultima sezione del mio portfolio  
 
 
 
