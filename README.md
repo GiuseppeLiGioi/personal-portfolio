@@ -1,4 +1,4 @@
-# 👨‍💻Giuseppe Li Gioi – Personal Portfolio
+# 👨🏼‍💻Giuseppe Li Gioi – Personal Portfolio
 
 Benvenuto nel mio portfolio personale! 💻  
 Qui puoi scoprire **chi sono**, **cosa faccio** e alcuni dei miei progetti personali che ho sviluppato come **Junior Full-Stack Web Developer**.
