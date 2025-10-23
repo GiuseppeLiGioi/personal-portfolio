@@ -22,7 +22,7 @@ Include:
 
 **Frontend:** React, JSX, CSS3.  
 **Backend:** Node.js, Express.js *(nei progetti full-stack)*  
-**Altro:** FontAwesome per le icone, leggere animazioni CSS personalizzate su scroll e render, layout responsive.
+**Altro:** FontAwesome per le icone, leggere animazioni CSS su scroll e render, layout responsive.
 
 ---
 
