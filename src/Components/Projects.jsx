@@ -56,9 +56,9 @@ export default function Projects() {
 
                     <div className="project-bottom">
                         <h4><strong>KICK-SHOP</strong></h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Reiciendis tempora beatae optio sapiente quos quam, corporis distinctio eos molestiae reprehenderit.
-                            Consequatur qui optio id quibusdam ea quas repellendus, aspernatur rerum.
+                        <p>
+                           Un progetto full-stack realizzato in team durante la mia permanenza in "Boolean". <br />
+                           Presenta un e-commerce di articoli sportivi: include HomePage dinamica con prodotti in evidenza, ricerca avanzata con filtri e ordinamenti, pagine prodotto complete con doppia visualizzazione, wishlist e carrello personali, checkout con validazione in tempo reale ed email di conferma con layout HTML.
                         </p>
                         <a href="https://github.com/GiuseppeLiGioi/kick-shop" target="_blank" rel="noopener noreferrer" className="a-projects">
                             <span><FontAwesomeIcon icon={faGithub} /></span> Apri su GitHub
@@ -75,9 +75,9 @@ export default function Projects() {
 
                     <div className="project-bottom">
                         <h4><strong>CAMPO MINATO</strong></h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Reiciendis tempora beatae optio sapiente quos quam, corporis distinctio eos molestiae reprehenderit.
-                            Consequatur qui optio id quibusdam ea quas repellendus, aspernatur rerum.
+                        <p>
+                            Una web app in Javascript, che riproduce il classico "Campo Minato", con difficoltà selezionabili e sistema di punteggio integrato. <br />
+                            Implementata anche una funzione di Best Time, grazie alla memoria del browser, che salva i tempi migliori per ogni difficoltà, mostrando così nell'interfaccia utente il tempo da battere.
                         </p>
                         <a href="https://github.com/GiuseppeLiGioi/campo-minato" target="_blank" rel="noopener noreferrer" className="a-projects">
                             <span><FontAwesomeIcon icon={faGithub} /></span> Apri su GitHub
