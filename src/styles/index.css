@@ -105,6 +105,10 @@ li {
 .about-inner {
   max-width: 600px;
   margin: 0 auto;
+  background-color: rgba(71, 99, 223, 0.20);
+  padding: 20px;
+  border-radius: 15px;
+
 }
 
 .title-about {
