@@ -37,7 +37,7 @@ Ogni progetto viene visualizzato con:
 ---
 
 ## 📸 Piccola anteprima del Portfolio
-- ![Ecco una piccola anteprima del mio portfolio](./public/port-1.jpg)
+![Ecco una piccola anteprima del mio portfolio](./public/port-1.jpg)
 
 
 ## 📍 Contatti
