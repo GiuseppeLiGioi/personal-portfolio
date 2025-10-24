@@ -24,6 +24,11 @@
     padding-top: 150px;
   }
 
+   .about-inner {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
   #about {
     scroll-margin-top: 150px;
   }
@@ -36,6 +41,7 @@
 
   .description-about {
     font-size: 1.2rem;
+    width: 60%;
   }
 
   .about-bottom-front,
@@ -58,6 +64,28 @@
     max-width: 740px;
     margin: 90px auto;
   }
+
+
+
+  
+.container-documents{
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 40px;
+
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+.container-certificate{
+  width: 40%;
+  margin: 10px auto;
+}
+
+.img-certificate{
+width: 100%;
+margin: 0px auto;
+}
 
   /*HERO STYLE*/
   .container-hero {

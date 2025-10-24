@@ -13,7 +13,7 @@ export default function Projects() {
 
                 <div className="container-single-project">
                     <div className="project-top">
-                        <img src="/pulsefit-foto.jpg" alt="foto pulsefit" />
+                        <img className="img-certificate" src="/pulsefit-foto.jpg" alt="foto pulsefit" />
                     </div>
 
                     <div className="project-bottom">

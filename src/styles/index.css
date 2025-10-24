@@ -104,7 +104,7 @@ li {
 
 .about-inner {
   max-width: 600px;
-  margin: 0 auto 40px;
+  margin: 0 auto;
 }
 
 .title-about {
@@ -145,6 +145,31 @@ li {
   padding: 30px;
   max-width: 600px;
   margin: 80px auto;
+}
+
+
+.container-documents{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  width: 100%;
+  max-width: 600px;
+  margin: 10px auto;
+}
+
+.container-certificate{
+  width: 100%;
+  max-width: 450px;
+  margin: 10px auto;
+}
+
+.img-certificate{
+height: 380px;
+width: 70%;
+margin: 10px auto;
 }
 
 

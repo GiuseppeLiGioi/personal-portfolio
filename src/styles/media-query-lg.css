@@ -36,6 +36,7 @@
 
   .description-about {
     font-size: 1.5rem;
+    width: 70%;
   }
 
   .about-bottom-front,
@@ -58,6 +59,24 @@
     max-width: 1200px;
     margin: 100px auto;
   }
+
+
+.about-inner {
+    max-width: 1200px;
+}
+.container-documents{
+  max-width: 1200px;
+}
+
+.container-certificate{
+  width: 30%;
+  margin: 10px auto;
+}
+
+.img-certificate{
+width: 100%;
+margin: 0px auto;
+}
 
 
   /*HERO STYLE*/
