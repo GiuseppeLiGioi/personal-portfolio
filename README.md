@@ -36,6 +36,10 @@ Ogni progetto viene visualizzato con:
 
 ---
 
+## Piccola Anteprima
+- ![Ecco una piccolissima anteprima del mio portfolio](./public/port-1.jpg)
+
+
 ## 📍 Contatti
 
 Puoi contattarmi o cono0scermi meglio tramite:
