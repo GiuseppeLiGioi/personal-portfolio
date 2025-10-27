@@ -225,8 +225,14 @@ margin: 0px auto;
 
 
 .info-weather-p {
-  font-size: 1.5rem;
-  
+  font-size: 1.5rem; 
+}
+
+
+
+/* Input città */
+.input-weather {
+  max-width: 600px;
 }
 
 

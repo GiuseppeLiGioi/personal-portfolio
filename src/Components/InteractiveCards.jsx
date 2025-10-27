@@ -179,7 +179,7 @@ export default function InteractiveCards() {
                         </div>
                     )}
 
-                    {/* INPUT MANUALE (FALLBACK) */}
+                    {/* INPUT MANUALE (FALLBACK) PER SELEZIONARE CITTà */}
                     {fallbackActive && (
                         <div className="container-weather-fallback">
                             <input

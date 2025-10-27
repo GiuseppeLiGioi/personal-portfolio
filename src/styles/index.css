@@ -316,7 +316,7 @@ margin: 10px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  gap: 5px;
   text-align: center;
 }
 
@@ -362,6 +362,32 @@ margin: 10px auto;
   width: 100px;
   height: 100px;
   display: block;
+}
+
+/* Container fallback input città */
+.container-weather-fallback {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  margin-top: 15px;
+}
+
+/* Input città */
+.input-weather {
+  width: 90%;
+  max-width: 300px;
+  padding: 10px 12px;
+  border: 2px solid rgba(71, 99, 223, 0.6);
+  border-radius: 8px;
+  background-color: #ffff;
+  text-align: center;
+}
+
+.input-weather:focus{
+  outline: none;
 }
 
 
