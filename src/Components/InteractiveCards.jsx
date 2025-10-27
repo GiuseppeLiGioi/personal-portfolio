@@ -12,7 +12,6 @@ export default function InteractiveCards() {
     const [error, setError] = useState("")
     const [visible, setVisible] = useState(false)
     const [inputLocality, setInputLocality] = useState("")
-    const [disabled, SetIsDisabled] = useState(false)
     const [fallbackActive, setFallbackActive] = useState(false)
 
     const [nasaError, setNasaError] = useState("")
@@ -26,6 +25,7 @@ export default function InteractiveCards() {
 
     const [phrase, setPhrase] = useState("")
     const [progress, setProgress] = useState(0)
+    const [index, setIndex] = useState(0)
 
 
     const myArray = [
@@ -136,8 +136,6 @@ export default function InteractiveCards() {
             setPhrase(myArray[index])
             setProgress(progress + 20)
             setIndex(index + 1)
-        } else {
-            SetIsDisabled(true)
         }
     }
 
@@ -146,7 +144,8 @@ export default function InteractiveCards() {
         if (progress < 100) {
             setProgress(progress + 20)
             handlePhrase()
-        } else {
+        } 
+        else {
             setProgress(0)
             setIndex(0)
             setPhrase(null)
@@ -195,7 +194,7 @@ export default function InteractiveCards() {
         <div className="container-interactive fade-in-up">
             <h2 className="title-interactive">INTERAGISCI E SCOPRI</h2>
             <p className="p-interactive">
-                Per riportare qualcosa di concreto all'interno del mio portfolio, in questa sezione ho implementato delle piccole logiche interattive con Javascript che, ti consentiranno allo stesso tempo, di scoprire qualcosa in più su di me.
+                Per riportare qualcosa di concreto all'interno del mio portfolio, in questa sezione ho implementato alcune piccole logiche avanzate in React/JS con chiamate API che, ti consentiranno allo stesso tempo, di scoprire qualcosa in più su di me.
             </p>
 
 
