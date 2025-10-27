@@ -155,8 +155,7 @@ margin: 0px auto;
     margin-top: 100px;
   }
 
-  .container-card-interactive,
-  .container-card-interactive-dark {
+  .container-card-interactive {
     flex: 0 0 calc(50% - 10px);
     min-height: 400px;
     box-sizing: border-box;
@@ -203,7 +202,15 @@ margin: 0px auto;
 
 
 .container-weather-card {
-  max-width: 740px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 480px; 
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 
@@ -250,6 +257,17 @@ margin: 0px auto;
   height: 100px;
   display: block;
 }
+
+.figure-nasa {
+  width: 300px;      
+  height: 150px;
+  margin-bottom: 40px;
+}
+
+
+
+
+
 
 
   /*PROJECTS STYLE*/

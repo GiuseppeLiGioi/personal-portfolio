@@ -15,6 +15,14 @@ export default function InteractiveCards() {
     const [disabled, SetIsDisabled] = useState(false)
     const [fallbackActive, setFallbackActive] = useState(false)
 
+    const [nasaError, setNasaError] = useState("")
+    const [nasaVisible, setNasaVisible] = useState(false)
+    const [nasaData, setNasaData] = useState({
+        title: "",
+        description: "",
+        url: ""
+    })
+
 
     const [phrase, setPhrase] = useState("")
     const [progress, setProgress] = useState(0)
@@ -29,6 +37,7 @@ export default function InteractiveCards() {
     ]
 
     const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
+    const nasaKey = import.meta.env.VITE_NASA_API_KEY;
 
 
     async function getWeatherByCity(city) {
@@ -49,7 +58,6 @@ export default function InteractiveCards() {
 
             setVisible(true);
             setError("");
-
         } catch (error) {
             console.error(error)
             setError("Impossibile mostrare il meteo per la destinazione scelta")
@@ -146,6 +154,37 @@ export default function InteractiveCards() {
     }
 
 
+    //FUNZIONI PER NASA CARD
+
+    async function getNasaData() {
+        try {
+            const res = await fetch(`https://api.nasa.gov/EPIC/api/natural/images?api_key=${nasaKey}`)
+
+            if (!res.ok) {
+                throw new Error(`Errore API NASA: ${res.status}`);
+            }
+            const data = await res.json()
+
+
+            const first = data[0]
+            const dateOnly = first.date.split(" ")[0];
+            const [year, month, day] = dateOnly.split("-");
+            const url = `https://epic.gsfc.nasa.gov/archive/natural/${year}/${month}/${day}/png/${first.image}.png`;
+
+            setNasaData({
+                title: first.caption,
+                url: url,
+                date: dateOnly
+            })
+
+        } catch (error) {
+            console.error(error)
+            setNasaError("Servizio NASA non disponibile al momento, riprova più tardi.")
+            setNasaVisible(false)
+        }
+    }
+
+
 
 
 
@@ -200,7 +239,7 @@ export default function InteractiveCards() {
 
                     {!fallbackActive && (
 
-                    <button className="btn-interactive" onClick={() => getWeather()}>Mostra Meteo</button>
+                        <button className="btn-interactive" onClick={() => getWeather()}>Mostra Meteo</button>
                     )}
 
 
@@ -208,19 +247,29 @@ export default function InteractiveCards() {
                 </div>
             </div>
 
-            {/*
-            <div className={darkMode ? "container-card-interactive-dark" : "container-card-interactive"} style={{ backgroundColor: bgColor }}>
-                <div className="container-logic-1">
-                    <h3 className={darkMode ? "title-card-interactive-dark" : "title-card-interactive"}>🎨 Cambia il colore di sfondo o il tema della card! 🎨</h3>
+            <div className="container-card-interactive">
+                <h3 className="title-card-interactive">
+                    🚀 NASA EPIC - Immagine del giorno
+                </h3>
 
-                </div>
-                <div className="container-button-interactive-css">
-                    <button className="btn-interactive" onClick={() => handleColor()}>Cambia colore!</button>
-                    <button className="btn-interactive" onClick={() => handleTheme()}>{darkMode ? "Tema chiaro" : "Tema scuro"}</button>
-                </div>
+                {nasaError && <p className="weather-error">{nasaError}</p>}
+
+                {nasaVisible && (
+                    <div className="container-weather-info">
+                        <h4 className="info-weather-title">{nasaData.title}</h4>
+                        <p className="info-weather-p">{nasaData.date}</p>
+
+                        <figure className="figure-nasa">
+                            <img src={nasaData.url} alt={nasaData.title} className="img-nasa" />
+                        </figure>
+                    </div>
+                )}
+
+                <button className="btn-interactive" onClick={() => getNasaData()}>
+                    Mostra Immagine NASA
+                </button>
             </div>
-              
-              */}
+
 
 
             <div className="container-card-interactive">

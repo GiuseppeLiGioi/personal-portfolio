@@ -145,6 +145,11 @@ margin: 0px auto;
   .input-weather {
   max-width: 800px;
 }
+
+.figure-nasa {
+  width: 400px;      
+  height: 250px;
+}
  
   
 
