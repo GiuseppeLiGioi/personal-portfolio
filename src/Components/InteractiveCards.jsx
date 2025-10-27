@@ -27,7 +27,7 @@ export default function InteractiveCards() {
         "Non vedo l'ora di sentirmi piccolo al fianco di persone professioniste, da cui avrò l'onore di poter apprendere cose nuove ed accrescere le mie competenze! 👨🏼‍💻"
     ]
 
-    const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
+    const apiKey = import.meta.env.REACT_APP_WEATHER_API_KEY;
 
     async function getWeather() {
         try {
@@ -41,6 +41,8 @@ export default function InteractiveCards() {
 
                             const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric&lang=it`)
                             const data = await res.json()
+
+                            console.log(data)
 
                             setLocality({
                                 city: data.name,

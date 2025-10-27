@@ -201,15 +201,48 @@ margin: 0px auto;
     color: rgba(71, 99, 223, 0.95);
   }
 
-  .p-casual-num {
-  font-size: 1.1rem;
+
+.container-weather-card {
+  max-width: 740px;
+}
+
+
+
+
+.weather-error {
+  font-size: 1rem; 
+}
+
+
+.info-weather-title {
+  font-size: 2rem;
+}
+
+
+.info-weather-semi-title {
+  font-size: 1.8rem;
+}
+
+
+.info-weather-p {
+  font-size: 1.5rem;
   
 }
 
 
-.p-feedback-num {
-  font-size: 1.1rem;
-  
+.figure-weather {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.img-weather {
+  width: 100px;
+  height: 100px;
+  display: block;
 }
 
 
