@@ -164,23 +164,7 @@ margin: 0px auto;
     margin: 0;
   }
 
-  .container-logic-1,
-  .container-logic-2 {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
 
-
-
-  .container-logic-1 p,
-  .container-logic-2 p,
-  .container-logic-1 h3,
-  .container-logic-2 h3 {
-    font-size: 1.2rem;
-  }
 
   .btn-interactive {
     border-radius: 10px;

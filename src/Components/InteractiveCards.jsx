@@ -1,17 +1,22 @@
 import { useState } from "react"
 
 export default function InteractiveCards() {
-    const [casualNum, setCasualNum] = useState(0)
-    const [numUser, setNumUser] = useState(0)
-    const [feedback, setFeedback] = useState("")
-    const [numGame, setNumGame] = useState(Math.floor(Math.random() * 51))
+    const [locality, setLocality] = useState({
+        city: "",
+        temperature: 0,
+        description: "",
+        icon: "",
+        weatherMain: ""
+    })
 
-    const [bgColor, setBgColor] = useState("")
-    const [darkMode, setDarkMode] = useState(false)
-    const [index, setIndex] = useState(0)
+    const [error, setError] = useState("")
+    const [visible, setVisible] = useState(false)
+    const [inputLocality, setInputLocality] = useState("")
+    const [disabled, SetIsDisabled] = useState(false)
+
+
     const [phrase, setPhrase] = useState("")
     const [progress, setProgress] = useState(0)
-    const [isDisabled, SetIsDisabled] = useState(false)
 
 
     const myArray = [
@@ -22,47 +27,68 @@ export default function InteractiveCards() {
         "Non vedo l'ora di sentirmi piccolo al fianco di persone professioniste, da cui avrò l'onore di poter apprendere cose nuove ed accrescere le mie competenze! 👨🏼‍💻"
     ]
 
-    function handleGenerate() {
-        const num = Math.floor(Math.random() * 101)
-        setCasualNum(num)
-    }
+    async function getWeather() {
+        try {
 
-    function handleVerify(num) {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const fetchWeather = async () => {
+                            const lat = position.coords.latitude;
+                            const long = position.coords.longitude;
 
-        if (num === numGame) {
-            setFeedback(`🎉 Complimenti, numero indovinato! Il numero era: ${numGame}`)
+                            const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=bdafb49216ef97c038c7aa933b9879a6&units=metric&lang=it`)
+                            const data = await res.json()
+
+                            setLocality({
+                                city: data.name,
+                                temperature: data.main.temp,
+                                description: data.weather[0].description,
+                                icon: data.weather[0].icon,
+                                weatherMain: data.weather[0].main
+                            })
+                            setVisible(true)
+                        }
+                        fetchWeather()
+                    },
+                    (error) => {
+                        setError("Impossibile ottenere la tua posizione")
+                    }
+                )
+            } else {
+                //input manuale
+            }
+
+        } catch (error) {
+            console.error(error)
+            setError("Non è stato possibile mostrare le informazioni meteo")
+            setVisible(false)
         }
-        else if (num > numGame) {
-            setFeedback("⬇️ Troppo alto!")
-        }
-        else {
-            setFeedback("⬆️ Troppo basso!")
-        }
     }
 
+    const temp = visible ? Math.round(locality.temperature) : null;
+    const iconUrl = visible ? `https://openweathermap.org/img/wn/${locality.icon}@2x.png` : "";
 
 
-    function handleReset() {
-        setNumUser("")
-        setFeedback("")
-        setNumGame(Math.floor(Math.random() * 51))
+const getWeatherStyle = () => {
+    if(!visible) return { background: "rgba(71, 99, 223, 0.15)", color: "#333" };
+
+    switch(locality.weatherMain) {
+        case "Clear":
+            return { background: "linear-gradient(to bottom, #a0e9ff, #56ccf2)", color: "#333" };
+        case "Clouds":
+            return { background: "linear-gradient(to bottom, #d0d4e5, #a0b3d8)", color: "#333" };
+        case "Rain":
+        case "Drizzle":
+            return { background: "linear-gradient(to bottom, #4a90e2, #2f5aa6)", color: "#fff" };
+        case "Snow":
+            return { background: "linear-gradient(to bottom, #f0f9ff, #cce6ff)", color: "#333" };
+        default:
+            return { background: "rgba(71, 99, 223, 0.15)", color: "#333" };
     }
+};
 
 
-
-    function handleColor() {
-        const color = "#" + Math.floor(Math.random() * 16777215).toString(16)
-        setBgColor(color)
-    }
-
-    function handleTheme() {
-        if (!darkMode) {
-            setBgColor("#1a1919");
-        } else {
-            setBgColor("#fff"); 
-        }
-        setDarkMode(!darkMode);
-    }
 
     function handlePhrase() {
         if (index < myArray.length) {
@@ -91,40 +117,40 @@ export default function InteractiveCards() {
 
 
 
+
+
     return (
         <div className="container-interactive fade-in-up">
             <h2 className="title-interactive">INTERAGISCI E SCOPRI</h2>
             <p className="p-interactive">
-                Per riportare qualcosa di concreto all'interno del mio portfolio, in questa sezione ho implementato delle piccole logiche interattive con Javascript che, ti consentiranno allo stesso tempo, di scoprire qualcosa in più su di me.  
+                Per riportare qualcosa di concreto all'interno del mio portfolio, in questa sezione ho implementato delle piccole logiche interattive con Javascript che, ti consentiranno allo stesso tempo, di scoprire qualcosa in più su di me.
             </p>
 
 
             <div className="container-card-interactive">
-                <div className="container-logic-1">
-                    <h3 className="title-card-interactive">🎲 Generatore Numero Casuale 0-100: 🎲</h3>
-                    <button className="btn-interactive" onClick={() => handleGenerate()}>Genera!</button>
-                    <p className="p-casual-num">{casualNum ? `Numero: ${casualNum}` : ""}</p>
-                </div>
+                <div className="container-weather-card" style={getWeatherStyle()}>
+                    <h3 className="title-card-interactive">🌤 Meteo Attuale</h3>
 
-                <div className="container-logic-2">
+                    {error && <p className="weather-error">{error}</p>}
 
-                    <h3 className="title-card-interactive">🎲 Indovina il numero casuale 0-50! 🎲</h3>
-                    <input
-                        type="number"
-                        placeholder="Digita il numero e scopri se è corretto"
-                        className="input-interactive"
-                        value={numUser}
-                        onChange={(e) => setNumUser(e.target.value)}
-                    />
-                    <div className="container-button-interactive-css">
-                        <button className="btn-interactive" onClick={() => handleVerify(Number(numUser))}>Verifica</button>
-                        <button className="btn-interactive" onClick={() => handleReset()}>Reset Gioco</button>
-                    </div>
-                    <p className="p-feedback-num">{feedback}</p>
+                    {visible && (
+                        <div className="container-weather-info">
+                            <h4 className="info-weather-title">{locality.city}</h4>
+                            <h5 className="info-weather-semi-title">{temp}°C</h5>
+                            <p className="info-weather-p">{locality.description}</p>
+
+                            <figure className="figure-weather">
+                            <img src={iconUrl} alt="foto meteo" className="img-weather"/>
+                            </figure>
+
+                        </div>
+                    )}
+                    
+                    <button className="btn-interactive" onClick={() => getWeather()}>Mostra Meteo</button>
                 </div>
             </div>
 
-
+              {/*
             <div className={darkMode ? "container-card-interactive-dark" : "container-card-interactive"} style={{ backgroundColor: bgColor }}>
                 <div className="container-logic-1">
                     <h3 className={darkMode ? "title-card-interactive-dark" : "title-card-interactive"}>🎨 Cambia il colore di sfondo o il tema della card! 🎨</h3>
@@ -135,6 +161,8 @@ export default function InteractiveCards() {
                     <button className="btn-interactive" onClick={() => handleTheme()}>{darkMode ? "Tema chiaro" : "Tema scuro"}</button>
                 </div>
             </div>
+              
+              */}
 
 
             <div className="container-card-interactive">
