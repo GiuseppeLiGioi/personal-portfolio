@@ -13,6 +13,7 @@ export default function InteractiveCards() {
     const [visible, setVisible] = useState(false)
     const [inputLocality, setInputLocality] = useState("")
     const [disabled, SetIsDisabled] = useState(false)
+    const [fallbackActive, setFallbackActive] = useState(false)
 
 
     const [phrase, setPhrase] = useState("")
@@ -27,7 +28,34 @@ export default function InteractiveCards() {
         "Non vedo l'ora di sentirmi piccolo al fianco di persone professioniste, da cui avrò l'onore di poter apprendere cose nuove ed accrescere le mie competenze! 👨🏼‍💻"
     ]
 
-    const apiKey = import.meta.env.REACT_APP_WEATHER_API_KEY;
+    const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
+
+
+    async function getWeatherByCity(city) {
+        try {
+
+            const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=it`)
+            const data = await res.json()
+
+            if (data && data.main && data.weather) {
+                setLocality({
+                    city: data.name,
+                    temperature: data.main.temp,
+                    description: data.weather[0].description,
+                    icon: data.weather[0].icon,
+                    weatherMain: data.weather[0].main
+                });
+            }
+
+            setVisible(true);
+            setError("");
+
+        } catch (error) {
+            console.error(error)
+            setError("Impossibile mostrare il meteo per la destinazione scelta")
+            setVisible(false)
+        }
+    }
 
     async function getWeather() {
         try {
@@ -57,10 +85,11 @@ export default function InteractiveCards() {
                     },
                     (error) => {
                         setError("Impossibile ottenere la tua posizione")
+                        setFallbackActive(true)
                     }
                 )
             } else {
-                //input manuale
+                setFallbackActive(true)
             }
 
         } catch (error) {
@@ -74,23 +103,23 @@ export default function InteractiveCards() {
     const iconUrl = visible ? `https://openweathermap.org/img/wn/${locality.icon}@2x.png` : "";
 
 
-const getWeatherStyle = () => {
-    if(!visible) return { background: "rgba(71, 99, 223, 0.15)", color: "#333" };
+    const getWeatherStyle = () => {
+        if (!visible) return { background: "rgba(71, 99, 223, 0.15)", color: "#333" };
 
-    switch(locality.weatherMain) {
-        case "Clear":
-            return { background: "linear-gradient(to bottom, #a0e9ff, #56ccf2)", color: "#333" };
-        case "Clouds":
-            return { background: "linear-gradient(to bottom, #d0d4e5, #a0b3d8)", color: "#333" };
-        case "Rain":
-        case "Drizzle":
-            return { background: "linear-gradient(to bottom, #4a90e2, #2f5aa6)", color: "#fff" };
-        case "Snow":
-            return { background: "linear-gradient(to bottom, #f0f9ff, #cce6ff)", color: "#333" };
-        default:
-            return { background: "rgba(71, 99, 223, 0.15)", color: "#333" };
-    }
-};
+        switch (locality.weatherMain) {
+            case "Clear":
+                return { background: "linear-gradient(to bottom, #a0e9ff, #56ccf2)", color: "#333" };
+            case "Clouds":
+                return { background: "linear-gradient(to bottom, #d0d4e5, #a0b3d8)", color: "#333" };
+            case "Rain":
+            case "Drizzle":
+                return { background: "linear-gradient(to bottom, #4a90e2, #2f5aa6)", color: "#fff" };
+            case "Snow":
+                return { background: "linear-gradient(to bottom, #f0f9ff, #cce6ff)", color: "#333" };
+            default:
+                return { background: "rgba(71, 99, 223, 0.15)", color: "#333" };
+        }
+    };
 
 
 
@@ -144,17 +173,42 @@ const getWeatherStyle = () => {
                             <p className="info-weather-p">{locality.description}</p>
 
                             <figure className="figure-weather">
-                            <img src={iconUrl} alt="foto meteo" className="img-weather"/>
+                                <img src={iconUrl} alt="foto meteo" className="img-weather" />
                             </figure>
 
                         </div>
                     )}
-                    
+
+                    {/* INPUT MANUALE (FALLBACK) */}
+                    {fallbackActive && (
+                        <div className="container-weather-fallback">
+                            <input
+                                type="text"
+                                className="input-weather"
+                                placeholder="Inserisci città"
+                                value={inputCity}
+                                onChange={(e) => setInputLocality(e.target.value)}
+                            />
+                            <button
+                                className="btn-interactive"
+                                onClick={() => getWeatherByCity(inputLocality)}
+                            >
+                                Mostra Meteo
+                            </button>
+                        </div>
+                    )}
+
+                    {!fallbackActive && (
+
                     <button className="btn-interactive" onClick={() => getWeather()}>Mostra Meteo</button>
+                    )}
+
+
+
                 </div>
             </div>
 
-              {/*
+            {/*
             <div className={darkMode ? "container-card-interactive-dark" : "container-card-interactive"} style={{ backgroundColor: bgColor }}>
                 <div className="container-logic-1">
                     <h3 className={darkMode ? "title-card-interactive-dark" : "title-card-interactive"}>🎨 Cambia il colore di sfondo o il tema della card! 🎨</h3>
