@@ -84,7 +84,7 @@ export default function InteractiveCards() {
                         fetchWeather()
                     },
                     (error) => {
-                        setError("Impossibile ottenere la tua posizione")
+                        setError("Impossibile ottenere la tua posizione automaticamente")
                         setFallbackActive(true)
                     }
                 )
@@ -186,7 +186,7 @@ export default function InteractiveCards() {
                                 type="text"
                                 className="input-weather"
                                 placeholder="Inserisci città"
-                                value={inputCity}
+                                value={inputLocality}
                                 onChange={(e) => setInputLocality(e.target.value)}
                             />
                             <button
