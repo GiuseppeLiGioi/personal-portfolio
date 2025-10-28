@@ -24,6 +24,7 @@ export default function InteractiveCards() {
 
 
     const [phrase, setPhrase] = useState("")
+    const [showPhrase, setShowPhrase] = useState(false);
     const [progress, setProgress] = useState(0)
     const [index, setIndex] = useState(0)
 
@@ -140,6 +141,8 @@ export default function InteractiveCards() {
 
     function handleProgress() {
         if (progress < 100) {
+            if (!showPhrase) setShowPhrase(true);
+
             setProgress(progress + 20)
             handlePhrase()
         }
@@ -147,6 +150,7 @@ export default function InteractiveCards() {
             setProgress(0)
             setIndex(0)
             setPhrase(null)
+            setShowPhrase(false);
         }
     }
 
@@ -213,6 +217,16 @@ export default function InteractiveCards() {
                         </div>
                     )}
 
+                    {!visible && !fallbackActive && (
+                        <div className="weather-placeholder">
+                            <div className="weather-icon-anim">
+                                <img src="/cloud-2.svg" alt="icona meteo" className="cloud-icon" />
+                            </div>
+                            <p className="weather-placeholder-text">
+                                Premi il bottone per scoprire le previsioni meteo.
+                            </p>
+                        </div>
+                    )}
                     {/* INPUT MANUALE (FALLBACK) PER SELEZIONARE CITTà */}
                     {fallbackActive && (
                         <div className="container-weather-fallback">
@@ -243,6 +257,8 @@ export default function InteractiveCards() {
             </div>
 
             <div className="container-card-interactive">
+                <div className="container-nasa-card">
+
                 <h3 className="title-card-interactive">
                     🚀 NASA EPIC - Immagine del giorno
                 </h3>
@@ -260,9 +276,23 @@ export default function InteractiveCards() {
                     </div>
                 )}
 
+                 {!nasaVisible && !nasaError &&(
+                        <div className="weather-placeholder">
+                            <div className="weather-icon-anim">
+                                <img src="/rocket.svg" alt="icona meteo" className="cloud-icon" />
+                            </div>
+                            <p className="weather-placeholder-text">
+                                Premi il bottone e goditi l'universo.
+                            </p>
+                        </div>
+                    )}
+
                 <button className="btn-interactive" onClick={() => getNasaData()}>
                     Mostra Immagine NASA
                 </button>
+                </div>
+
+
             </div>
 
 
@@ -271,10 +301,12 @@ export default function InteractiveCards() {
                 <div className="container-logic-interactive-top">
                     <h3 className="title-card-interactive">👨🏼‍💻 Scopri qualcosa in più su di me 🚀</h3>
                 </div>
-                <div className="container-phrase">
 
-                    <p className="phrase-p">{phrase}</p>
-                </div>
+                {showPhrase && (
+                    <div className="container-phrase">
+                        <p className="phrase-p">{phrase}</p>
+                    </div>
+                )}
 
                 <div className="container-logic-interactive-bottom">
 

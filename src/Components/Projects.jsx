@@ -7,7 +7,7 @@ export default function Projects() {
          <section id="projects">
 
         <div className="container-projects-page">
-            <h2 className="title-about">I MIEI PROGETTI</h2>
+            <h2 className="title-profile">I MIEI PROGETTI</h2>
 
             <div className="container-projects">
 
@@ -31,7 +31,7 @@ export default function Projects() {
 
                 <div className="container-single-project">
                     <div className="project-top">
-                        <img src="/finance-foto.jpg" alt="foto finance" />
+                        <img src="/finance-foto.jpg" alt="foto finance"/>
                     </div>
 
                     <div className="project-bottom">

@@ -19,63 +19,56 @@
   }
 
   /*ABOUT RESPONSIVE*/
+.container-profile{
+  max-width: 1200px;
+}
 
-  .about-inner {
-    max-width: 1200px;
-  }
-
-  .title-about {
-    font-size: 2.5rem;
-    margin-bottom: 0;
-  }
-
-  .description-about {
-    font-size: 1.5rem;
-    width: 70%;
-  }
-
-  .container-documents {
-    max-width: 1200px;
-    padding: 20px;
-  }
-
-  .container-certificate {
-    width: 25%;
-    margin: 10px auto;
-    margin-top: 30px;
-  }
-
-  .img-certificate {
-    width: 100%;
-    margin: 0px auto;
-    padding: 20px;
-  }
-
-  .about-bottom-front,
-  .about-bottom-front-spec,
-  .about-bottom-back,
-  .about-bottom-back-spec {
-    margin-bottom: 60px;
-  }
-
-  .title-skills {
-    font-size: 1.6rem;
-    margin-bottom: 20px;
-  }
-
-  .span-skill {
-    font-size: 1.3rem;
-  }
-
-  .box-about {
-    max-width: 1200px;
-    margin: 100px auto;
-  }
+.title-profile{
+  font-size: 2rem;
+}
 
 
-  .about-inner {
-    max-width: 1200px;
-  }
+
+.description-about{
+  font-size: 1.2rem;
+}
+
+.container-all-about{
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.figure-certificate{
+  padding: 10px;
+  background-color: white;
+  width: 400px;
+  height: auto;
+  margin-top: 40px;
+}
+
+.img-certificate{
+ width: 100%;
+ height: 100%;
+ border-radius: 10px;
+}
+
+.container-all-stack{
+justify-content: space-between;
+gap: 100px;
+}
+
+
+
+.li-stack{
+  padding: 12px;
+  font-size: 1.1rem;
+}
+
+
+
 
 
 
@@ -140,7 +133,7 @@
   .title-interactive {
     width: 100%;
     text-align: center;
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .input-weather {
@@ -148,9 +141,18 @@
   }
 
   .figure-nasa {
-    width: 400px;
+    width: 390px;
     height: 250px;
   }
+
+  .cloud-icon {
+  width: 120px;
+  height: 120px;
+}
+
+.weather-placeholder-text {
+  font-size: 1.2rem;
+}
 
 
 
@@ -226,9 +228,7 @@
     max-width: 400px;
   }
 
-  .title-contact {
-    font-size: 2.2rem;
-  }
+
 
   a[href^="tel:"],
   a[href^="mailto:"] {

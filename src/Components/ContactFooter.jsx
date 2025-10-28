@@ -7,7 +7,7 @@ export default function ContactFooter() {
         <section id="contact">
 
             <div className="container-footer">
-                <h2 className="title-contact">RECAPITI E PIATTAFORME</h2>
+                <h2 className="title-profile">RECAPITI E PIATTAFORME</h2>
                 <p className="description-footer">
                     Per metterti in contatto con me o conoscere meglio il mio percorso, in questa sezione trovi la mia residenza, i miei recapiti, il mio CV scaricabile in PDF e i link alle mie piattaforme professionali.
                 </p>

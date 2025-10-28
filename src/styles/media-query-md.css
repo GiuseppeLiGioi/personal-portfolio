@@ -46,72 +46,34 @@
   }
 
   /*ABOUT RESPONSIVE*/
-  .container-about {
-    padding-top: 150px;
-  }
+ .container-profile{
+  max-width: 740px;
+}
 
-  .about-inner {
-    max-width: 800px;
-    margin: 0 auto;
-  }
+.title-profile{
+  font-size: 2rem;
+  color: rgba(71, 99, 223, 0.95);
+  text-align: center;
+}
 
-  #about {
-    scroll-margin-top: 150px;
-  }
+.container-skills{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 10px;
+}
 
-
-  .title-about {
-    font-size: 2.0rem;
-    margin-bottom: 30px;
-  }
-
-  .description-about {
-    font-size: 1.2rem;
-    width: 60%;
-  }
-
-  .about-bottom-front,
-  .about-bottom-front-spec,
-  .about-bottom-back,
-  .about-bottom-back-spec {
-    margin-bottom: 45px;
-  }
-
-  .title-skills {
-    font-size: 1.4rem;
-    margin-bottom: 15px;
-  }
-
-  .span-skill {
-    font-size: 1.2rem;
-  }
-
-  .box-about {
-    max-width: 740px;
-    margin: 90px auto;
-  }
+.description-about{
+  font-size: 1.2rem;
+}
 
 
 
+.figure-certificate{
+  width: 420px;
+}
 
-  .container-documents {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 40px;
-
-    max-width: 740px;
-    margin: 0 auto;
-  }
-
-  .container-certificate {
-    width: 40%;
-    margin: 10px auto;
-  }
-
-  .img-certificate {
-    width: 100%;
-    margin: 0px auto;
-  }
 
   /*HERO STYLE*/
   .container-hero {
@@ -227,7 +189,8 @@
   }
 
 
-  .container-weather-card {
+  .container-weather-card,
+  .container-nasa-card{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -285,10 +248,19 @@
   }
 
   .figure-nasa {
-    width: 300px;
+    width: 270px;
     height: 150px;
     margin-bottom: 40px;
   }
+
+  .cloud-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.weather-placeholder-text {
+  font-size: 1.1rem;
+}
 
 
 
@@ -351,10 +323,7 @@
     max-width: 300px;
   }
 
-  .title-contact {
-    font-size: 2.0rem;
-    text-align: center;
-  }
+
 
   a[href^="tel:"],
   a[href^="mailto:"] {
@@ -362,11 +331,11 @@
   }
 
   .container-platforms a.a-contact {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
   .description-footer {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
 
