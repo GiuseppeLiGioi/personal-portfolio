@@ -15,7 +15,7 @@ export default function ContactFooter() {
                 <div className="container-contacts">
 
                     <div className="container-info">
-                        <a className="a-contact" href="https://www.google.com/maps?q=Via+del+Cisto+42,+Olbia,+Sardegna,+Italia" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faHouse} /> Via del cisto 42, Olbia, Sardegna, Italia</a>
+                        <a className="a-contact" href="https://www.google.com/maps?q=Olbia,+Sardegna,+Italia" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faHouse} />Olbia, Sardegna, Italia</a>
                         <a href="tel:+393403231407"><FontAwesomeIcon icon={faPhone} /><span className="span-contact">+39 3403231407</span></a>
                         <a href="mailto:giuseppe.li.gioi.job@gmail.com"><FontAwesomeIcon icon={faEnvelope} /><span className="span-contact">giuseppe.li.gioi.job@gmail.com</span></a>
                     </div>
