@@ -194,7 +194,7 @@ export default function InteractiveCards() {
         <div className="container-interactive fade-in-up">
             <h2 className="title-interactive">INTERAGISCI E SCOPRI</h2>
             <p className="p-interactive">
-                Per riportare qualcosa di concreto all'interno del mio portfolio, in questa sezione ho implementato alcune piccole logiche avanzate in React/JS con chiamate API che, ti consentiranno allo stesso tempo, di scoprire qualcosa in più su di me.
+                Per riportare qualcosa di concreto all'interno del mio portfolio, in questa sezione ho implementato alcune logiche avanzate in React/JS, tra cui l'integrazione con API e funzionalità interattive, che ti consentiranno allo stesso tempo, di scoprire qualcosa in più su di me.
             </p>
 
 
