@@ -1,26 +1,21 @@
 @media (min-width: 1024px) {
 
   /*NAVBAR RESPONSIVE*/
-  .container-navbar {
-    padding: 35px;
-  }
-
-  .navbar-inner {
-    max-width: 1200px;
-  }
 
   .list-link-navbar {
-    flex-direction: row;
-    gap: 40px;
+    gap: 50px;
   }
 
+  .list-link-navbar.open {
+    display: flex;
+  }
 
   .link-navbar a {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
-  .btn-hero {
-    margin-left: 55px;
+  .link-navbar a:hover {
+    color: rgb(16, 10, 65);
   }
 
   /*ABOUT RESPONSIVE*/
@@ -30,13 +25,30 @@
   }
 
   .title-about {
-    font-size: 2.2rem;
-    margin-bottom: 40px;
+    font-size: 2.5rem;
+    margin-bottom: 0;
   }
 
   .description-about {
     font-size: 1.5rem;
     width: 70%;
+  }
+
+  .container-documents {
+    max-width: 1200px;
+    padding: 20px;
+  }
+
+  .container-certificate {
+    width: 25%;
+    margin: 10px auto;
+    margin-top: 30px;
+  }
+
+  .img-certificate {
+    width: 100%;
+    margin: 0px auto;
+    padding: 20px;
   }
 
   .about-bottom-front,
@@ -61,22 +73,10 @@
   }
 
 
-.about-inner {
+  .about-inner {
     max-width: 1200px;
-}
-.container-documents{
-  max-width: 1200px;
-}
+  }
 
-.container-certificate{
-  width: 30%;
-  margin: 10px auto;
-}
-
-.img-certificate{
-width: 100%;
-margin: 0px auto;
-}
 
 
   /*HERO STYLE*/
@@ -89,6 +89,7 @@ margin: 0px auto;
 
   .container-hero-info p {
     font-size: 1.2rem;
+    margin: 0;
   }
 
   .btn-hero {
@@ -113,7 +114,7 @@ margin: 0px auto;
 
 
 
- 
+
 
   .container-logic-interactive-top p,
   .container-logic-interactive-bottom p,
@@ -143,15 +144,15 @@ margin: 0px auto;
   }
 
   .input-weather {
-  max-width: 800px;
-}
+    max-width: 800px;
+  }
 
-.figure-nasa {
-  width: 400px;      
-  height: 250px;
-}
- 
-  
+  .figure-nasa {
+    width: 400px;
+    height: 250px;
+  }
+
+
 
 
 

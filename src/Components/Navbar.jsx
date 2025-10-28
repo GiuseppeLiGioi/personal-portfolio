@@ -1,13 +1,27 @@
-export default function Navbar(){
-    return(
+import { useState } from "react"
+
+
+export default function Navbar() {
+    const [isOpen, setIsOpen] = useState(false)
+    return (
         <nav className="container-navbar">
+
+            
             <div className="navbar-inner">
-            <ul className="list-link-navbar"> 
-                <li className="link-navbar"><a href="#hero">Intestazione</a></li>
-                <li className="link-navbar"><a href="#about">Profilo</a></li>
-                <li className="link-navbar"><a href="#projects">Progetti</a></li>
-                <li className="link-navbar"><a href="#contact">Contatti</a></li>
-            </ul>
+            <button
+                className="hamburger"
+                onClick={() => setIsOpen(!isOpen)}
+                aria-label="Apri menu"
+            >
+                ☰
+            </button>
+
+                <ul className={`list-link-navbar ${isOpen ? "open" : ""}`}>
+                    <li className="link-navbar"><a href="#hero" onClick={() => setIsOpen(false)}>Intestazione</a></li>
+                    <li className="link-navbar"><a href="#about" onClick={() => setIsOpen(false)}>Profilo</a></li>
+                    <li className="link-navbar"><a href="#projects" onClick={() => setIsOpen(false)}>Progetti</a></li>
+                    <li className="link-navbar"><a href="#contact" onClick={() => setIsOpen(false)}>Contatti</a></li>
+                </ul>
             </div>
         </nav>
     )
