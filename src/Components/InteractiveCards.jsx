@@ -36,14 +36,12 @@ export default function InteractiveCards() {
         "Non vedo l'ora di sentirmi piccolo al fianco di persone professioniste, da cui avrò l'onore di poter apprendere cose nuove ed accrescere le mie competenze! 👨🏼‍💻"
     ]
 
-    const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
-    const nasaKey = import.meta.env.VITE_NASA_API_KEY;
 
 
     async function getWeatherByCity(city) {
         try {
 
-            const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=it`)
+            const res = await fetch(`/.netlify/functions/getWeather?city=${city}`)
             const data = await res.json()
 
             if (data && data.main && data.weather) {
@@ -75,7 +73,7 @@ export default function InteractiveCards() {
                             const lat = position.coords.latitude;
                             const long = position.coords.longitude;
 
-                            const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric&lang=it`)
+                            const res = await fetch(`/.netlify/functions/getWeather?lat=${lat}&lon=${long}`)
                             const data = await res.json()
 
                             console.log(data)
@@ -144,7 +142,7 @@ export default function InteractiveCards() {
         if (progress < 100) {
             setProgress(progress + 20)
             handlePhrase()
-        } 
+        }
         else {
             setProgress(0)
             setIndex(0)
@@ -157,7 +155,7 @@ export default function InteractiveCards() {
 
     async function getNasaData() {
         try {
-            const res = await fetch(`https://api.nasa.gov/EPIC/api/natural/images?api_key=${nasaKey}`)
+            const res = await fetch(`/.netlify/functions/getNasaEpic`)
 
             if (!res.ok) {
                 throw new Error(`Errore API NASA: ${res.status}`);
@@ -165,16 +163,14 @@ export default function InteractiveCards() {
             const data = await res.json()
 
 
-            const first = data[0]
-            const dateOnly = first.date.split(" ")[0];
-            const [year, month, day] = dateOnly.split("-");
-            const url = `https://epic.gsfc.nasa.gov/archive/natural/${year}/${month}/${day}/png/${first.image}.png`;
-
             setNasaData({
-                title: first.caption,
-                url: url,
-                date: dateOnly
-            })
+                title: data.title,
+                url: data.url,
+                date: data.date
+            });
+
+            setNasaVisible(true)
+            setNasaError("")
 
         } catch (error) {
             console.error(error)
