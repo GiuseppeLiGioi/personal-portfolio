@@ -267,8 +267,8 @@ export default function InteractiveCards() {
 
                 {nasaVisible && (
                     <div className="container-weather-info">
-                        <h4 className="info-weather-title">{nasaData.title}</h4>
-                        <p className="info-weather-p">{nasaData.date}</p>
+                        <h4 className="info-nasa-title">{nasaData.title}</h4>
+                        <p className="info-nasa-p">{nasaData.date}</p>
 
                         <figure className="figure-nasa">
                             <img src={nasaData.url} alt={nasaData.title} className="img-nasa" />

@@ -194,6 +194,8 @@ gap: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    flex: 1;
     min-height: 480px;
     width: 100%;
     padding: 1.5rem;
@@ -248,8 +250,8 @@ gap: 10px;
   }
 
   .figure-nasa {
-    width: 270px;
-    height: 150px;
+    width: 98%;
+    height: 230px;
     margin-bottom: 40px;
   }
 
@@ -259,6 +261,14 @@ gap: 10px;
 }
 
 .weather-placeholder-text {
+  font-size: 1.1rem;
+}
+
+.info-nasa-title{
+  font-size: 1.1rem;
+}
+
+.info-nasa-p{
   font-size: 1.1rem;
 }
 
