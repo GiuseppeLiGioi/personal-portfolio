@@ -3,7 +3,7 @@ import { faArrowDown} from "@fortawesome/free-solid-svg-icons";
 
 export default function Hero(){
     return(
-        <section id="hero" className="fade-in-up">
+        <section id="hero">
 
         <div className="container-hero ">
 

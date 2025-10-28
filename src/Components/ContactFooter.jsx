@@ -4,7 +4,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 export default function ContactFooter() {
     return (
-        <section id="contact" className="fade-in-up">
+        <section id="contact">
 
             <div className="container-footer">
                 <h2 className="title-contact">RECAPITI E PIATTAFORME</h2>

@@ -1,6 +1,6 @@
 export default function About(){
     return(
-        <section id="about" className="container-about fade-in-up">
+        <section id="about" className="container-about">
 
         <div className="about-inner">
         <h2 className="title-about">PROFILO</h2>
@@ -18,7 +18,7 @@ export default function About(){
         </div>
         </div>
 
-        <div className="box-about fade-in-up">
+        <div className="box-about">
 
         <div className="about-bottom-front">
             <h3 className="title-skills">Stack Tecnologico Frontend</h3>
@@ -47,7 +47,7 @@ export default function About(){
         </div>
 
 
-        <div className="box-about fade-in-up">
+        <div className="box-about">
 
         <div className="about-bottom-back">
             <h3 className="title-skills">Stack Tecnologico Backend</h3>

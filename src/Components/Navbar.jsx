@@ -1,6 +1,6 @@
 export default function Navbar(){
     return(
-        <nav className="container-navbar fade-in-up">
+        <nav className="container-navbar">
             <div className="navbar-inner">
             <ul className="list-link-navbar"> 
                 <li className="link-navbar"><a href="#hero">Intestazione</a></li>
