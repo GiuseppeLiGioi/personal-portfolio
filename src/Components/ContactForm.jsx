@@ -26,6 +26,8 @@ export default function ContactForm() {
 
     const nameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s'-]+$/;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegexIntl = /^\+?[0-9\s\-]{7,15}$/;
+
 
 
     const handleSubmit = async (e) => {
@@ -56,17 +58,26 @@ export default function ContactForm() {
 
 
         if (formData.name && !nameRegex.test(formData.name)) {
+            setFormData(prev => ({...prev, name: ""}))
             newErrors.name = "Il campo Nome deve contenere solo lettere.";
             valid = false;
         }
 
         if (formData.surname && !nameRegex.test(formData.surname)) {
+            setFormData(prev => ({...prev, surname: ""}))
             newErrors.surname = "Il campo Cognome deve contenere solo lettere.";
             valid = false;
         }
 
         if (formData.email && !emailRegex.test(formData.email)) {
+            setFormData(prev => ({...prev, email: ""}))
             newErrors.email = "L'email deve essere valida (@ & .).";
+            valid = false;
+        }
+
+        if (formData.phone && !phoneRegexIntl.test(formData.phone)) {
+            setFormData(prev => ({...prev, phone: ""}))
+            newErrors.phone = "Il numero inserito non ha un formato valido";
             valid = false;
         }
 
@@ -176,8 +187,8 @@ export default function ContactForm() {
                             <input
                                 type="tel"
                                 name="phone"
-                                placeholder="Inserisci il tuo numero di telefono"
-                                className="input-form"
+                                placeholder={errors.phone || "Inserisci il tuo numero di telefono"}
+                                className={errors.phone ? "input-form-error" : "input-form"}
                                 value={formData.phone}
                                 onChange={handleChange}
                             />
