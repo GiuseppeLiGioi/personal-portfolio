@@ -25,6 +25,59 @@ export default function ContactForm() {
     const nameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s'-]+$/;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+ 
+     const handleSubmit = (e) => {
+        e.preventDefault()
+
+        const newErrors = {}
+        let valid = true;
+
+        if(!formData.name.trim()){
+            newErrors.name = "Campo Nome obbligatorio"
+            valid = false;
+        }
+
+        if(!formData.surname.trim()){
+            newErrors.surname = "Campo Cognome obbligatorio"
+            valid = false;
+        }
+
+        if(!formData.email.trim()){
+            newErrors.email = "Campo E-mail obbligatorio"
+            valid = false;
+        }
+
+        if(!formData.message.trim()){
+            newErrors.message = "Campo Messaggio obbligatorio"
+            valid = false;
+        }
+
+
+        if(formData.name && !nameRegex.test(formData.name)){
+            newErrors.name = "Il campo Nome deve contenere solo lettere.";
+            valid = false;
+        }
+
+        if(formData.surname && !nameRegex.test(formData.surname)){
+            newErrors.surname = "Il campo Cognome deve contenere solo lettere.";
+            valid = false;
+        }
+
+        if(formData.email && !emailRegex.test(formData.email)){
+            newErrors.email = "L'email deve essere valida (@ & .).";
+            valid = false;
+        }
+
+        setErrors(newErrors)
+
+        if(valid){
+        e.target.submit();
+        setSended(true);
+        }
+
+     }
+
+
 
 
     const handleChange = (e) => {
@@ -44,11 +97,7 @@ export default function ContactForm() {
                     <form
                         action="https://formspree.io/f/xqagbzab"
                         method="POST"
-                        onSubmit={(e) => {
-                            e.preventDefault()
-                            setSended(true)
-                            e.target.submit()
-                        }}
+                        onSubmit={handleSubmit}
                         className="contact-form"
                     >
 
