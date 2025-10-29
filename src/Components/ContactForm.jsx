@@ -125,7 +125,14 @@ export default function ContactForm() {
 
         <section id="contact-form">
             <div className="container-contact-form">
+
+                <div className="contact-form-info">
                 <h2 className="title-profile">RESTIAMO IN CONTATTO</h2>
+                <p className="description-about">Per rimanere in contatto con me, in questa sezione ho preparato un form da compilare per inviarmi un messaggio! <br />
+                Hai un progetto in mente da condividere con me? Hai qualche domanda da pormi? Vorresti propormi qualcosa? <br />
+                Beh, sei nella sezione giusta! Compila i campi e riceverai presto una mia risposta!
+                </p>
+                </div>
 
                 {!sended ? (
                     <form

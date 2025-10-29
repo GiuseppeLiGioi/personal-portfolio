@@ -772,6 +772,7 @@ margin-top: 40px;
   align-items: center;
   gap: 15px;
   padding: 10px;
+  background-color: #4763DF1A;
   
 
   max-width: 600px;
@@ -779,6 +780,17 @@ margin-top: 40px;
   margin: 60px auto;
   border-radius: 10px;
   
+}
+
+.contact-form-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+
+  width: 100%;
 }
 
 .contact-form{
@@ -793,6 +805,7 @@ display: flex;
   background-color: #4763DF26;
   border-radius: 15px;
 }
+
 
 .form-group{
   display: flex;
