@@ -1,4 +1,6 @@
 import { useState } from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faPaperPlane} from "@fortawesome/free-solid-svg-icons";
 export default function ContactForm() {
     const [formData, setFormData] = useState({
         name: "",
@@ -119,6 +121,7 @@ export default function ContactForm() {
                         onSubmit={handleSubmit}
                         className="contact-form"
                     >
+                       <div className="form-group">
 
                         <label className="label-form">
                             Nome: *
@@ -132,6 +135,9 @@ export default function ContactForm() {
                                 value={formData.name}
                                 onChange={handleChange}
                             />
+                       </div>
+
+                       <div className="form-group">
 
 
                         <label className="label-form">
@@ -145,8 +151,9 @@ export default function ContactForm() {
                                 value={formData.surname}
                                 onChange={handleChange}
                             />
-                        
+                       </div>
 
+                       <div className="form-group">
 
                         <label className="label-form">
                             E-mail: *
@@ -159,8 +166,9 @@ export default function ContactForm() {
                                 value={formData.email}
                                 onChange={handleChange}
                             />
-                       
+                       </div>
 
+                       <div className="form-group">
 
                         <label className="label-form">
                             Telefono:
@@ -173,9 +181,10 @@ export default function ContactForm() {
                                 value={formData.phone}
                                 onChange={handleChange}
                             />
-                        
+                       </div>
+                       
 
-
+                       <div className="form-group">
 
                         <label className="label-form">
                             Azienda:
@@ -188,9 +197,10 @@ export default function ContactForm() {
                                 value={formData.agency}
                                 onChange={handleChange}
                             />
-                        
+                       </div>
 
 
+                       <div className="form-group">
                         <label className="label-form">
                             Oggetto:
                         </label>
@@ -202,9 +212,11 @@ export default function ContactForm() {
                                 value={formData.object}
                                 onChange={handleChange}
                             />
-                       
+
+                       </div>
 
 
+                       <div className="form-group form-group-full">
                         <label className="label-form">
                             Messaggio: *
                         </label>
@@ -216,11 +228,10 @@ export default function ContactForm() {
                                 onChange={handleChange}
                             >
                             </textarea>
-                        
+                       </div>
 
+                        <button type="submit" className="btn-form">Invia Messaggio <span className="span-form"><FontAwesomeIcon icon={faPaperPlane} /></span></button>
 
-
-                        <button type="submit" className="btn-form">Invia Messaggio</button>
                     </form>
                 ) : (
                     <div className="container-thankyou-message">

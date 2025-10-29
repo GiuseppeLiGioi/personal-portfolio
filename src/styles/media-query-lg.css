@@ -224,6 +224,29 @@ gap: 100px;
   max-width: 1200px;
 }
 
+.contact-form{
+
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 20px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #4763DF26;
+  border-radius: 15px;
+}
+
+.form-group{
+  width: 48%;
+}
+
+.form-group-full{
+  width: 100%;
+}
+
+
 
 
 .label-form{
@@ -250,6 +273,10 @@ font-size: 1.3rem;
 
 .btn-form{
 font-size: 1.3rem;
+}
+
+.span-form{
+  font-size: 1.3rem;
 }
 
 

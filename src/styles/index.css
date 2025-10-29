@@ -97,7 +97,7 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 1rem;
   color: rgba(71, 99, 223, 0.95);
   width: 100vw;
   height: 100vh;
@@ -778,19 +778,29 @@ margin-top: 40px;
   width: 95%;
   margin: 60px auto;
   border-radius: 10px;
+  
 }
 
 .contact-form{
 display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 15px;
   padding: 20px;
   width: 100%;
   margin: 0 auto;
   background-color: #4763DF26;
   border-radius: 15px;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
 }
 
 .label-form{
@@ -851,6 +861,13 @@ font-size: 1rem;
 text-align: center;
 align-self: center;
 margin-top: 20px;
+}
+
+.span-form{
+  margin-left: 5px;
+  text-align: center;
+  font-size: 1rem;
+  color: white;
 }
 
 
