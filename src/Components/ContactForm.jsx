@@ -25,57 +25,78 @@ export default function ContactForm() {
     const nameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s'-]+$/;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
- 
-     const handleSubmit = (e) => {
+
+    const handleSubmit = async (e) => {
         e.preventDefault()
 
         const newErrors = {}
         let valid = true;
 
-        if(!formData.name.trim()){
+        if (!formData.name.trim()) {
             newErrors.name = "Campo Nome obbligatorio"
             valid = false;
         }
 
-        if(!formData.surname.trim()){
+        if (!formData.surname.trim()) {
             newErrors.surname = "Campo Cognome obbligatorio"
             valid = false;
         }
 
-        if(!formData.email.trim()){
+        if (!formData.email.trim()) {
             newErrors.email = "Campo E-mail obbligatorio"
             valid = false;
         }
 
-        if(!formData.message.trim()){
+        if (!formData.message.trim()) {
             newErrors.message = "Campo Messaggio obbligatorio"
             valid = false;
         }
 
 
-        if(formData.name && !nameRegex.test(formData.name)){
+        if (formData.name && !nameRegex.test(formData.name)) {
             newErrors.name = "Il campo Nome deve contenere solo lettere.";
             valid = false;
         }
 
-        if(formData.surname && !nameRegex.test(formData.surname)){
+        if (formData.surname && !nameRegex.test(formData.surname)) {
             newErrors.surname = "Il campo Cognome deve contenere solo lettere.";
             valid = false;
         }
 
-        if(formData.email && !emailRegex.test(formData.email)){
+        if (formData.email && !emailRegex.test(formData.email)) {
             newErrors.email = "L'email deve essere valida (@ & .).";
             valid = false;
         }
 
         setErrors(newErrors)
 
-        if(valid){
-        e.target.submit();
-        setSended(true);
+        if (!valid) return;
+
+        try {
+            const response = await fetch("https://formspree.io/f/xqagbzab", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                setSended(true);
+                setFormData({ name: "", surname: "", email: "", phone: "", agency: "", object: "", message: "" });
+
+                setTimeout(() => {
+                    setSended(false);
+                }, 5000);
+            } else {
+                alert("Errore nell'invio del messaggio. Riprova.");
+            }
+        } catch (error) {
+            alert("Errore durante il tentativo di inviare il messaggio, riprova.");
         }
 
-     }
+    }
 
 
 
@@ -95,8 +116,6 @@ export default function ContactForm() {
 
                 {!sended ? (
                     <form
-                        action="https://formspree.io/f/xqagbzab"
-                        method="POST"
                         onSubmit={handleSubmit}
                         className="contact-form"
                     >
