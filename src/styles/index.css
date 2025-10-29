@@ -177,6 +177,9 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 gap: 10px;
+width: 100%;
+padding: 10px;
+margin: 0 auto;
 }
 
 .description-about{
@@ -191,6 +194,9 @@ gap: 10px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 10px;
+  width: 100%;
+  margin: 0 auto;
   gap: 20px;
 }
 
@@ -204,9 +210,10 @@ align-items: center;
 .figure-certificate{
   padding: 10px;
   background-color: white;
-  width: 400px;
   height: auto;
   margin-top: 40px;
+  width: 95%;
+  margin: 0 auto;
 }
 
 .img-certificate{
