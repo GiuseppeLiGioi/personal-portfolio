@@ -104,16 +104,21 @@ li {
   text-align: center;
   font-family: 'Roboto', sans-serif ;
   font-size:20px;
+  overflow-x: hidden;
 }
 
 
 .link-navbar {
   width: 100%; 
-  margin: 0;
+  margin: 0 auto;
+  display: flex;                
+  justify-content: center;
 }
 
 .link-navbar a {
-  display: block; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
   text-align: center;
   text-decoration: none;
   color: rgba(71, 99, 223, 0.95);
@@ -126,8 +131,13 @@ li {
   border: 2px solid rgba(128, 149, 243, 0.5); 
   transition: all 0.2s ease;
   background-color: rgba(240, 244, 255, 0);
-  width: 60%;
+  width: auto;
+  width: 90vw;
+  white-space: nowrap;
+  padding: 20px;
   margin: 0 auto;
+  box-sizing: border-box;
+
 }
 
 
