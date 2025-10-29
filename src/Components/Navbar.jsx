@@ -20,7 +20,8 @@ export default function Navbar() {
                     <li className="link-navbar"><a href="#hero" onClick={() => setIsOpen(false)}>Intro</a></li>
                     <li className="link-navbar"><a href="#about" onClick={() => setIsOpen(false)}>Profilo</a></li>
                     <li className="link-navbar"><a href="#projects" onClick={() => setIsOpen(false)}>Progetti</a></li>
-                    <li className="link-navbar"><a href="#contact" onClick={() => setIsOpen(false)}>Contatti</a></li>
+                    <li className="link-navbar"><a href="#contact-form" onClick={() => setIsOpen(false)}>Contattami</a></li>
+                    <li className="link-navbar"><a href="#contact" onClick={() => setIsOpen(false)}>Recapiti</a></li>
                 </ul>
             </div>
         </nav>
