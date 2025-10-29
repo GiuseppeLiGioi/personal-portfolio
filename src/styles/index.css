@@ -763,6 +763,135 @@ margin-top: 40px;
 }
 
 
+
+/*CONTACT-FORM STYLE*/
+.container-contact-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  
+
+  max-width: 600px;
+  width: 95%;
+  margin: 60px auto;
+  border-radius: 10px;
+}
+
+.contact-form{
+display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #4763DF26;
+  border-radius: 15px;
+}
+
+.label-form{
+color:rgba(71, 99, 223, 0.95);
+font-size: 1rem;
+font-weight: 600;
+}
+
+
+.input-form,
+.textarea-form{
+  background-color: white;
+  color: rgba(71, 99, 223, 0.95) !important;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1.5px solid rgba(71, 99, 223, 0.95);
+  text-align: center;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.input-form,
+.textarea-form::placeholder{
+font-size: 1rem;
+color: #585858;
+}
+
+.input-form:focus,
+.textarea-form:focus{
+outline: none;
+border: 2px solid rgba(44, 79, 236, 0.76);
+}
+
+.input-form-error{
+  background-color: white;
+  color: rgba(71, 99, 223, 0.95);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1.5px solid rgba(71, 99, 223, 0.95);
+  text-align: center;
+  width: 100%;
+
+  font-size: 1rem;
+}
+
+.input-form-error::placeholder{
+  color: rgb(253, 144, 144);
+}
+
+.btn-form{
+padding: 15px;
+border-radius: 10px;
+background-color: rgba(71, 99, 223, 0.95);
+color: white;
+border: none;
+width: 100%;
+font-size: 1rem;
+text-align: center;
+align-self: center;
+margin-top: 20px;
+}
+
+
+/*BOX THANKYOU FORM STYLE*/
+.container-thankyou-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 250px;
+  padding: 20px;
+  background-color: rgba(71, 99, 223, 0.05);
+  border-radius: 15px;
+  margin: 20px 0;
+  text-align: center;
+
+  max-width: 600px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.container-thankyou-info {
+  max-width: 500px;
+  width: 100%;
+}
+
+.title-thankyou {
+  font-size: 1.6rem;
+  color: rgba(71, 99, 223, 0.95);
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.p-thankyou {
+  font-size: 1rem;
+  color: rgba(16, 10, 65, 0.8);
+  margin-top: 5px;
+}
+
+
+
+
 /*FOOTER STYLE*/
 .container-footer {
   display: flex;

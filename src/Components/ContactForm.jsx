@@ -122,49 +122,49 @@ export default function ContactForm() {
 
                         <label className="label-form">
                             Nome: *
+                        </label>
 
                             <input
                                 type="text"
                                 name="name"
                                 placeholder={errors.name || "Inserisci il tuo nome"}
-                                className="input-form"
+                                className={errors.name ? "input-form-error" : "input-form"}
                                 value={formData.name}
                                 onChange={handleChange}
                             />
-                        </label>
 
 
                         <label className="label-form">
                             Cognome: *
-
+                        </label>
                             <input
                                 type="text"
                                 name="surname"
                                 placeholder={errors.surname || "Inserisci il tuo cognome"}
-                                className="input-form"
+                                className={errors.surname ? "input-form-error" : "input-form"}
                                 value={formData.surname}
                                 onChange={handleChange}
                             />
-                        </label>
+                        
 
 
                         <label className="label-form">
                             E-mail: *
-
+                        </label>
                             <input
                                 type="email"
                                 name="email"
                                 placeholder={errors.email || "Inserisci la tua email"}
-                                className="input-form"
+                                className={errors.email ? "input-form-error" : "input-form"}
                                 value={formData.email}
                                 onChange={handleChange}
                             />
-                        </label>
+                       
 
 
                         <label className="label-form">
                             Telefono:
-
+                        </label>
                             <input
                                 type="tel"
                                 name="phone"
@@ -173,13 +173,13 @@ export default function ContactForm() {
                                 value={formData.phone}
                                 onChange={handleChange}
                             />
-                        </label>
+                        
 
 
 
                         <label className="label-form">
                             Azienda:
-
+                        </label>
                             <input
                                 type="text"
                                 name="agency"
@@ -188,12 +188,12 @@ export default function ContactForm() {
                                 value={formData.agency}
                                 onChange={handleChange}
                             />
-                        </label>
+                        
 
 
                         <label className="label-form">
                             Oggetto:
-
+                        </label>
                             <input
                                 type="text"
                                 name="object"
@@ -202,32 +202,31 @@ export default function ContactForm() {
                                 value={formData.object}
                                 onChange={handleChange}
                             />
-                        </label>
+                       
 
 
                         <label className="label-form">
                             Messaggio: *
-
+                        </label>
                             <textarea
                                 name="message"
                                 placeholder={errors.message || "Digita qui il tuo messaggio..."}
-                                className="textarea-form"
+                                className={errors.message ? "input-form-error" : "textarea-form"}
                                 value={formData.message}
-                                required
                                 onChange={handleChange}
                             >
                             </textarea>
-                        </label>
+                        
 
 
 
-                        <button type="submit" className="btn-form">Invia</button>
+                        <button type="submit" className="btn-form">Invia Messaggio</button>
                     </form>
                 ) : (
                     <div className="container-thankyou-message">
                         <div className="container-thankyou-info">
-                            <h3 className="title-thankyou">Grazie per il tuo messaggio!</h3>
-                            <p className="p-thankyou">Ti contatterò al più presto!</p>
+                            <h3 className="title-thankyou">Grazie per avermi mandato un messaggio!</h3>
+                            <p className="p-thankyou">Mi impegnerò per risponderti al più presto!</p>
                         </div>
                     </div>
                 )}
