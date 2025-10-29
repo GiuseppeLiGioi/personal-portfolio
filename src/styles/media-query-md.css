@@ -309,6 +309,68 @@
 
 
 
+
+/*CONTACT-FORM RESPONSIVE*/
+.container-contact-form{
+  padding: 15px;
+  max-width: 740px;
+  margin: 70px auto;
+}
+
+
+
+.label-form{
+font-size: 1.2rem;
+font-weight: 700;
+}
+
+
+.input-form,
+.textarea-form{
+  font-size: 1.2rem;
+}
+
+.input-form,
+.textarea-form::placeholder{
+font-size: 1.2rem;
+}
+
+
+
+.input-form-error{
+  font-size: 1.2rem;
+}
+
+
+.btn-form{
+width: 100%;
+font-size: 1.2rem;
+}
+
+
+/*BOX THANKYOU FORM STYLE*/
+.container-thankyou-message {
+  min-height: 350px;
+  max-width: 740px;
+}
+
+.container-thankyou-info {
+  max-width: 600px;
+}
+
+.title-thankyou {
+  font-size: 1.8rem;
+}
+
+.p-thankyou {
+  font-size: 1.2rem;
+}
+
+
+
+
+
+
   /*FOOTER STYLE*/
 
   .container-footer {

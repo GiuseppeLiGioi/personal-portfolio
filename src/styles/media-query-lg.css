@@ -216,6 +216,62 @@ gap: 100px;
   }
 
 
+
+
+/*CONTACT-FORM RESPONSIVE*/
+.container-contact-form{
+  padding: 20px;
+  max-width: 1200px;
+}
+
+
+
+.label-form{
+font-size: 1.3rem;
+}
+
+
+.input-form,
+.textarea-form{
+  font-size: 1.3rem;
+}
+
+.input-form,
+.textarea-form::placeholder{
+font-size: 1.3rem;
+}
+
+
+
+.input-form-error{
+  font-size: 1.3rem;
+}
+
+
+.btn-form{
+font-size: 1.3rem;
+}
+
+
+/*BOX THANKYOU FORM STYLE*/
+.container-thankyou-message {
+  min-height: 500px;
+  max-width: 1200px;
+}
+
+.container-thankyou-info {
+  max-width: 1000px;
+}
+
+.title-thankyou {
+  font-size: 2rem;
+}
+
+.p-thankyou {
+  font-size: 1.4rem;
+}
+
+
   /*FOOTER STYLE*/
   .container-footer {
     max-width: 1200px;
