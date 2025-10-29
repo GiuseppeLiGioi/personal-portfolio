@@ -2,12 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif ;
 }
 
-html {
-  font-size: 16px;
-  scroll-behavior: smooth;
-}
+
 
 
 
@@ -51,13 +49,22 @@ li {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(71, 99, 223, 0.95);
   z-index: 1000;
   display: flex;
   flex-direction: column;
   padding: 10px;
   border-radius: 0 0 10px 10px;
+
+  background-color: #f0f4ff;
+  background-image:
+  repeating-linear-gradient(45deg,
+    rgba(71, 99, 223, 0.05) 0px,
+    rgba(71, 99, 223, 0.05) 1px,
+    transparent 1px,
+    transparent 20px);
+  background-size: 100% 100%;
 }
+
 
 .navbar-inner {
   display: flex;
@@ -71,10 +78,9 @@ li {
   font-size: 2rem;
   background: none;
   border: none;
-  color: white;
+  color: rgba(71, 99, 223, 0.95);
   cursor: pointer;
   align-self: flex-start;
-  z-index: 2000;
 }
 
 
@@ -88,6 +94,16 @@ li {
 
 .list-link-navbar.open {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  color: rgba(71, 99, 223, 0.95);
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  font-family: 'Roboto', sans-serif ;
+  font-size:20px;
 }
 
 
@@ -98,15 +114,26 @@ li {
 
 .link-navbar a {
   display: block; 
+  text-align: center;
   text-decoration: none;
-  color: white;
-  font-size: 1rem;
-  padding: 2px;
-  font-family:Arial, Helvetica, sans-serif;
+  color: rgba(71, 99, 223, 0.95);
+  font-size: 3rem;
+  font-family: 'Poppins', sans-serif; 
+  text-align: center;
+  font-weight: 700; 
+    
+  border-radius: 12px;     
+  border: 2px solid rgba(128, 149, 243, 0.5); 
+  transition: all 0.2s ease;
+  background-color: rgba(240, 244, 255, 0);
+  width: 60%;
+  margin: 0 auto;
 }
 
+
 .link-navbar a:hover {
-  color: rgb(16, 10, 65);
+  color: white;
+  background-color: rgba(71, 99, 223, 0.95);
 }
 
 

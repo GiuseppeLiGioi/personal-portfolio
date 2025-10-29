@@ -3,6 +3,8 @@
   /*NAVBAR RESPONSIVE*/
   .container-navbar {
     flex-direction: row;
+    background-color: rgba(71, 99, 223, 0.95);
+    background-image: none;
   }
 
   .navbar-inner {
@@ -28,51 +30,55 @@
   }
 
   .link-navbar {
-    width: auto; 
+    width: auto;
     margin: 0;
   }
 
   .link-navbar a {
-    display: inline-block; 
+    display: inline-block;
     padding: 5px;
     font-size: 1.2rem;
     color: white;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
+    border-radius: none;
+    border: none;
+    background-color:none;
+    padding: 10px;
+    width: 100%;
   }
 
   .link-navbar a:hover {
-    color: rgb(16, 10, 65);
+    color: rgb(196, 194, 209);
   }
 
   /*ABOUT RESPONSIVE*/
- .container-profile{
-  max-width: 740px;
-}
+  .container-profile {
+    max-width: 740px;
+  }
 
-.title-profile{
-  font-size: 2rem;
-  color: rgba(71, 99, 223, 0.95);
-  text-align: center;
-}
+  .title-profile {
+    font-size: 2rem;
+    color: rgba(71, 99, 223, 0.95);
+    text-align: center;
+  }
 
-.container-skills{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: 10px;
-}
+  .container-skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
 
-.description-about{
-  font-size: 1.2rem;
-}
+  .description-about {
+    font-size: 1.2rem;
+  }
 
 
 
-.figure-certificate{
-  width: 420px;
-}
+  .figure-certificate {
+    width: 420px;
+  }
 
 
   /*HERO STYLE*/
@@ -190,7 +196,7 @@ gap: 10px;
 
 
   .container-weather-card,
-  .container-nasa-card{
+  .container-nasa-card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -256,21 +262,21 @@ gap: 10px;
   }
 
   .cloud-icon {
-  width: 100px;
-  height: 100px;
-}
+    width: 100px;
+    height: 100px;
+  }
 
-.weather-placeholder-text {
-  font-size: 1.1rem;
-}
+  .weather-placeholder-text {
+    font-size: 1.1rem;
+  }
 
-.info-nasa-title{
-  font-size: 1.1rem;
-}
+  .info-nasa-title {
+    font-size: 1.1rem;
+  }
 
-.info-nasa-p{
-  font-size: 1.1rem;
-}
+  .info-nasa-p {
+    font-size: 1.1rem;
+  }
 
 
 
