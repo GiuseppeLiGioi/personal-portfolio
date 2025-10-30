@@ -720,7 +720,6 @@ li {
   width: 95%;
   margin: 0 auto;
   padding: 15px;
-  border: 2px solid green;
 }
 
 .container-top-projects {
@@ -731,12 +730,26 @@ li {
 
   gap: 15px;
 }
-
+.top-bar-code{
+padding: 8px;
+border: 2px solid #4763DF;
+border-radius: 20px;
+background: linear-gradient(
+  135deg,
+  #ffffff 0%,
+  #f8f9ff 40%,
+  #e6ebff 70%,
+  #ffffff 100%
+);
+}
 .top-bar-code,
 .top-bar-code span {
   font-size: 1rem;
 }
 
+.top-bar-code span{
+  color:  #4763DF;
+}
 .title-projects {
   text-align: center;
   font-size: 1.6rem;
@@ -764,7 +777,6 @@ li {
 
 
   gap: 15px;
-  border: 2px solid red;
   margin-top: 20px;
 }
 
@@ -810,8 +822,7 @@ font-size: 1.1rem;
   flex-wrap: wrap;
   gap: 15px;
   padding: 10px;
-  border-radius: 15px;  
-  border: 2px solid orange;
+  border-radius: 15px; 
 }
 
 
@@ -849,6 +860,7 @@ color: white;
 width: 100%;
 font-size: 1rem;
 }
+
 
 .btn-project-link{
 padding: 10px;

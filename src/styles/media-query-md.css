@@ -284,8 +284,79 @@
 
 
 
-  /*PROJECTS STYLE*/
 
+/*PROJECTS STYLE*/
+.container-projects {
+  gap: 30px;
+  max-width: 740px;
+  border: 2px solid green;
+}
+
+
+.top-bar-code{
+padding: 12px;
+border-radius: 30px;
+}
+.top-bar-code,
+.top-bar-code span {
+  font-size: 1.2rem;
+}
+
+
+.title-projects {
+  font-size: 2rem;
+}
+
+.description-projects {
+  font-size: 1.2rem;
+}
+
+/*STYLE SINGLE-PROJECT*/
+
+
+.title-single-project{
+  font-size: 1.6rem;
+}
+
+
+
+.semi-title{
+font-size: 1.3rem;
+}
+
+.p-state,
+.p-state span{
+  font-size: 1.2rem;
+}
+
+.description-single-project{
+  font-size: 1.1rem;
+}
+
+
+
+
+.li-project{
+padding: 12px;
+font-size: 0.9rem;
+;
+}
+
+
+
+
+.btn-project-git{
+padding: 12px;
+border-radius: 15px;
+font-size: 1.2rem;
+}
+
+
+.btn-project-link{
+padding: 12px;
+border-radius: 15px;
+font-size: 1.2rem;
+}
 
 
 
