@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCss, faGithub, faHtml5, faJs, faLinkedin, faReact } from "@fortawesome/free-brands-svg-icons";
-import { faDatabase, faCode, faCircleCheck, faArrowUpRightFromSquare, faFile, faChartBar, faChartLine, faClock } from "@fortawesome/free-solid-svg-icons";
+import { faDatabase, faCode, faCircleCheck, faArrowUpRightFromSquare, faFile, faChartBar, faChartLine, faClock, faThumbtack } from "@fortawesome/free-solid-svg-icons";
 
 export default function Projects() {
     return (
@@ -9,9 +9,11 @@ export default function Projects() {
             <div className="container-projects">
                 <div className="container-top-projects">
                     <p className="top-bar-code"><span><FontAwesomeIcon icon={faCode} /></span> <strong>I miei progetti</strong></p>
-                    <h2 className="title-projects">Progetti Fissati</h2>
+                    <h2 className="title-projects"><span className="span-project-title"><FontAwesomeIcon icon={faThumbtack} /></span> Progetti Fissati <span className="span-project-title"><FontAwesomeIcon icon={faThumbtack} /></span></h2>
                     <p className="description-projects">In questa sezione troverai i miei migliori progetti, una breve descrizione di ognuno e le tecnolgie utilizzate per il loro sviluppo. </p>
                 </div>
+
+                <div className="container-cards-project">
 
                 <div className="container-single-project">
 
@@ -166,6 +168,8 @@ export default function Projects() {
 
                     </div>
                 </div>
+                </div>
+
 
 
 

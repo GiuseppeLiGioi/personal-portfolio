@@ -166,8 +166,89 @@ gap: 100px;
 
 
 
-  /*PROJECTS STYLE*/
 
+/*PROJECTS STYLE*/
+.container-projects {
+  gap: 25px;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.top-bar-code{
+padding: 10px;
+border-radius: 25px;
+}
+
+.top-bar-code,
+.top-bar-code span {
+  font-size: 1.4rem;
+}
+
+
+.title-projects {
+  font-size: 2rem;
+}
+
+.description-projects {
+  font-size: 1.3rem;
+}
+.container-cards-project{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px;
+}
+/*STYLE SINGLE-PROJECT*/
+.container-single-project {
+  width: 48%;
+}
+
+
+.title-single-project{
+  font-size: 1.6rem;
+}
+
+.container-semititle-state{
+  gap: 70px;
+}
+
+.semi-title{
+font-size: 1.3rem;
+}
+
+.p-state,
+.p-state span{
+  font-size: 1.2rem;
+}
+
+.description-single-project{
+  font-size: 1.2rem;
+}
+
+
+.li-project{
+padding: 10px;
+border-radius: 30px;
+font-size: 1rem;
+
+}
+.container-buttons-project{
+margin-top: auto; 
+}
+
+
+
+.btn-project-git{
+font-size: 1.2rem;
+}
+
+
+.btn-project-link{
+font-size: 1.2rem;
+}
 
 
 
