@@ -719,7 +719,9 @@ li {
   max-width: 600px;
   width: 95%;
   margin: 0 auto;
-  padding: 15px;
+  padding: 20px;
+  background-color:  rgba(71, 99, 223, 0.10);
+  border-radius: 15px;
 }
 
 .container-top-projects {
