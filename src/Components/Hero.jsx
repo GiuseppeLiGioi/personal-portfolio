@@ -9,6 +9,7 @@ export default function Hero(){
 
 
             <div className="container-img-name">
+                
             <div className="container-img-hero">
                <img src="/logo-portfolio.png" alt="Foto Personale"/>
             </div>

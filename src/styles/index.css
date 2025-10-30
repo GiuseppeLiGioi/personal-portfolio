@@ -261,7 +261,7 @@ li {
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
-  padding-top: 230px;
+  padding-top: 100px;
 }
 
 .container-img-name {
@@ -269,6 +269,7 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 10px;
 }
 
 .name-user {
