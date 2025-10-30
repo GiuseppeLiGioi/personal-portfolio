@@ -65,6 +65,11 @@ li {
   background-size: 100% 100%;
 }
 
+.no-scroll{
+  overflow: hidden;
+  height: 100vh;
+}
+
 
 .navbar-inner {
   display: flex;

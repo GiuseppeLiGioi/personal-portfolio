@@ -3,18 +3,33 @@ import { useState } from "react"
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false)
+
+    const handleClick = () => {
+        const click = !isOpen
+        setIsOpen(click)
+
+        if (click) {
+            document.body.classList.add("no-scroll") 
+        } else {
+            document.body.classList.remove("no-scroll")
+        }
+    }
+
+
+
+
     return (
         <nav className="container-navbar">
 
-            
+
             <div className="navbar-inner">
-            <button
-                className="hamburger"
-                onClick={() => setIsOpen(!isOpen)}
-                aria-label="Apri menu"
-            >
-                ☰
-            </button>
+                <button
+                    className="hamburger"
+                    onClick={handleClick}
+                    aria-label="Apri menu"
+                >
+                    ☰
+                </button>
 
                 <ul className={`list-link-navbar ${isOpen ? "open" : ""}`}>
                     <li className="link-navbar"><a href="#hero" onClick={() => setIsOpen(false)}>Intro</a></li>
