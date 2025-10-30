@@ -187,6 +187,11 @@ border-radius: 25px;
 
 .title-projects {
   font-size: 2rem;
+  width: auto !important;
+}
+
+.span-project-title{
+margin: 0 30px;
 }
 
 .description-projects {

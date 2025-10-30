@@ -65,10 +65,7 @@ li {
   background-size: 100% 100%;
 }
 
-.no-scroll{
-  overflow: hidden;
-  height: 100vh;
-}
+
 
 
 .navbar-inner {
@@ -770,11 +767,10 @@ background: linear-gradient(
 );
 padding: 10px;
 border-radius: 15px;
+width: 100%;
 }
 
-.span-project-title{
-  margin: 0 30px;
-}
+
 
 .description-projects {
   text-align: center;
