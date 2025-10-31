@@ -672,7 +672,7 @@ margin-bottom: 15px;
 
 .p-interactive {
   text-align: center;
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
   font-size: 1rem;
   color: white;
@@ -777,62 +777,45 @@ width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
-  width: 85%;
+  gap: 12px;
+  width: 90%;
   margin: 0 auto;
-  padding: 12px;
-  min-height: 140px;
+  padding: 8px;
+  min-height: 110px;
   border-radius: 15px;
   position: relative;
   overflow: hidden;
 }
 
-/* ====== ONDA DI LUCE SUL BLOCCO ====== */
-.health-widget::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -60%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.3) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
-}
 
 
-
+/* + */
 .plus-symbol {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: 700;
-  color: #4763DF;
+  color: #4763df;
   user-select: none;
   transition: transform 0.25s ease;
-  font-size: 3.5rem;
+  font-size: 2.8rem; /* più piccolo per mobile */
 }
 
 .plus-symbol:hover {
   transform: scale(1.1);
 }
 
-
+/* linea */
 .ecg-line {
-  flex: 2;
-  max-width: 35%;
+  flex: 1;
+  max-width: 28%;
   height: auto;
   overflow: visible;
-  stroke: #4763DF;
+  stroke: #4763df;
   stroke-width: 3;
   fill: none;
   display: block;
-
-  /* Effetto disegno continuo */
   stroke-dasharray: 60;
   stroke-dashoffset: 60;
   animation: ecgDraw 2.5s ease-in-out infinite;
@@ -847,7 +830,7 @@ width: 100%;
   50% {
     stroke-dashoffset: 0;
     opacity: 1;
-    stroke: #4763DF;
+    stroke: #4763df;
   }
   100% {
     stroke-dashoffset: -60;
@@ -856,7 +839,7 @@ width: 100%;
   }
 }
 
-/* pillola con cerchio*/
+/* pillola */
 .pill-container-pulse {
   flex: 1;
   display: flex;
@@ -866,22 +849,21 @@ width: 100%;
 }
 
 .pill-shape {
-  width: 50px;
-  height: 14px;
+  width: 26px;
+  height: 8px;
   background: linear-gradient(135deg, #ffffff, #cfd8ff);
   border-radius: 50px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
   transform: rotate(45deg);
 }
 
-/* Cerchio loader luminoso attorno alla pillola */
+/* Cerchio loader luminoso */
 .pill-container-pulse::before {
   content: "";
   position: absolute;
-  width: 70px;
-  height: 70px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
-  padding: 2px; 
   background: conic-gradient(
     from 0deg,
     rgba(255,255,255,0.1) 0deg,
@@ -890,12 +872,10 @@ width: 100%;
     rgba(255,255,255,0.9) 270deg,
     rgba(255,255,255,0.1) 360deg
   );
-  -webkit-mask: 
-    radial-gradient(farthest-side, transparent calc(100% - 4px), black 100%);
-  mask: 
-    radial-gradient(farthest-side, transparent calc(100% - 4px), black 100%);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 4px), black 100%);
+  mask: radial-gradient(farthest-side, transparent calc(100% - 4px), black 100%);
   animation: loaderSpin 3s linear infinite;
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 @keyframes loaderSpin {
