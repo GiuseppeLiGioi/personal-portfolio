@@ -27,6 +27,9 @@ export default function InteractiveCards() {
     const [showPhrase, setShowPhrase] = useState(false);
     const [progress, setProgress] = useState(0)
     const [index, setIndex] = useState(0)
+    const [showWidget, setShowWidget] = useState(false);
+    const [pulse, setPulse] = useState(false);
+
 
 
     const myArray = [
@@ -140,17 +143,29 @@ export default function InteractiveCards() {
 
 
     function handleProgress() {
-        if (progress < 100) {
-            if (!showPhrase) setShowPhrase(true);
+        setPulse(true);
+        setTimeout(() => setPulse(false), 500);
 
-            setProgress(progress + 20)
-            handlePhrase()
+
+        if (!showPhrase) {
+            setShowPhrase(true);
+            setShowWidget(false);
+            setProgress(0);
+            setIndex(0);
+            handlePhrase();
+            return;
         }
-        else {
-            setProgress(0)
-            setIndex(0)
-            setPhrase(null)
+
+        if (progress < 100) {
+            setProgress((prev) => prev + 20);
+            handlePhrase();
+        } else {
+
+            setProgress(0);
+            setIndex(0);
+            setPhrase("");
             setShowPhrase(false);
+            setShowWidget(true);
         }
     }
 
@@ -192,10 +207,13 @@ export default function InteractiveCards() {
 
     return (
         <div className="container-interactive">
+            <div className="container-title-descr-interactive">
+
             <h2 className="title-interactive">INTERAGISCI E SCOPRI</h2>
             <p className="p-interactive">
                 Per riportare qualcosa di concreto all'interno del mio portfolio, in questa sezione ho implementato alcune logiche avanzate in React/JS, tra cui l'integrazione con API e funzionalità interattive, che ti consentiranno allo stesso tempo, di scoprire qualcosa in più su di me.
             </p>
+            </div>
 
 
             <div className="container-card-interactive">
@@ -259,24 +277,24 @@ export default function InteractiveCards() {
             <div className="container-card-interactive">
                 <div className="container-nasa-card">
 
-                <h3 className="title-card-interactive">
-                    🚀 NASA EPIC - Immagine del giorno
-                </h3>
+                    <h3 className="title-card-interactive">
+                        🚀 NASA EPIC - Immagine del giorno
+                    </h3>
 
-                {nasaError && <p className="weather-error">{nasaError}</p>}
+                    {nasaError && <p className="weather-error">{nasaError}</p>}
 
-                {nasaVisible && (
-                    <div className="container-weather-info">
-                        <h4 className="info-nasa-title">{nasaData.title}</h4>
-                        <p className="info-nasa-p">{nasaData.date}</p>
+                    {nasaVisible && (
+                        <div className="container-weather-info">
+                            <h4 className="info-nasa-title">{nasaData.title}</h4>
+                            <p className="info-nasa-p">{nasaData.date}</p>
 
-                        <figure className="figure-nasa">
-                            <img src={nasaData.url} alt={nasaData.title} className="img-nasa" />
-                        </figure>
-                    </div>
-                )}
+                            <figure className="figure-nasa">
+                                <img src={nasaData.url} alt={nasaData.title} className="img-nasa" />
+                            </figure>
+                        </div>
+                    )}
 
-                 {!nasaVisible && !nasaError &&(
+                    {!nasaVisible && !nasaError && (
                         <div className="weather-placeholder">
                             <div className="weather-icon-anim">
                                 <img src="/rocket.svg" alt="icona meteo" className="cloud-icon" />
@@ -287,9 +305,9 @@ export default function InteractiveCards() {
                         </div>
                     )}
 
-                <button className="btn-interactive" onClick={() => getNasaData()}>
-                    Mostra Immagine NASA
-                </button>
+                    <button className="btn-interactive" onClick={() => getNasaData()}>
+                        Mostra Immagine NASA
+                    </button>
                 </div>
 
 
@@ -298,25 +316,54 @@ export default function InteractiveCards() {
 
 
             <div className="container-card-interactive">
+                <div className="container-all-last-interactive">
+
                 <div className="container-logic-interactive-top">
                     <h3 className="title-card-interactive">👨🏼‍💻 Scopri qualcosa in più su di me 🚀</h3>
                 </div>
 
-                {showPhrase && (
-                    <div className="container-phrase">
-                        <p className="phrase-p">{phrase}</p>
+                {!showPhrase && (
+                    <div className="health-widget">
+                        {/* + */}
+                        <div className="plus-symbol">+</div>
+
+                        {/* Linea */}
+                        <svg
+                            className="ecg-line"
+                            viewBox="0 0 100 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <polyline
+                                points="0,10 20,10 25,5 30,15 35,10 100,10"
+                                fill="none"
+                                strokeLinejoin="round"
+                            />
+                        </svg>
+
+                        {/* Pillola + cerchio animato */}
+                        <div className="pill-container-pulse">
+                            <div className="pill-shape"></div>
+                        </div>
                     </div>
                 )}
 
-                <div className="container-logic-interactive-bottom">
+                {showPhrase && (
+                    <div className="container-logic-interactive-bottom">
+                        <div className="container-phrase">
+                            <p className="phrase-p">{phrase}</p>
+                        </div>
 
-                    <p className="progress-p">{progress}%</p>
-                    <div className="container-progressbar">
-                        <div className="progressbar" style={{ width: `${progress}%` }}></div>
+                        <p className="progress-p">{progress}%</p>
+                        <div className="container-progressbar">
+                            <div className="progressbar" style={{ width: `${progress}%` }}></div>
+                        </div>
                     </div>
-                </div>
+                )}
+
+
                 <button className="btn-interactive" onClick={() => handleProgress()}>Scopri di più</button>
             </div>
+        </div>
 
 
 

@@ -25,6 +25,7 @@
 
 .title-profile{
   font-size: 2rem;
+  width: auto !important;
 }
 
 
@@ -98,11 +99,9 @@ gap: 100px;
     padding: 20px;
   }
 
-  .container-card-interactive,
-  .container-card-interactive-dark {
+  .container-card-interactive{
     flex: 0 0 calc(50% - 20px);
     min-height: 400px;
-    justify-content: space-between;
   }
 
 
@@ -127,7 +126,7 @@ gap: 100px;
 
   .p-interactive {
     max-width: 1200px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   .title-interactive {
@@ -163,6 +162,19 @@ gap: 100px;
 }
 
 
+/*widget animato responsive last interactive*/
+.health-widget {
+  gap: 30px;
+}
+
+.plus-symbol {
+  font-size: 5rem;
+}
+
+.container-all-last-interactive{
+  max-width: 1200px;
+  width: 95%;
+}
 
 
 
@@ -372,7 +384,7 @@ font-size: 1.3rem;
   }
 
   .description-footer {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
 

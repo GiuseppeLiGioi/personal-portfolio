@@ -61,8 +61,7 @@
 
   .title-profile {
     font-size: 2rem;
-    color: rgba(71, 99, 223, 0.95);
-    text-align: center;
+    width: auto !important;
   }
 
   .container-skills {
@@ -185,16 +184,15 @@
 
   .p-interactive {
     max-width: 740px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-bottom: 20px;
   }
 
 
   .title-interactive {
-    width: 100%;
-    text-align: center;
+    width: auto !important;
     font-size: 2.0rem;
-    color: rgba(71, 99, 223, 0.95);
+    text-align: center !important; 
   }
 
 
@@ -281,10 +279,47 @@
     font-size: 1.1rem;
   }
 
+  .container-all-last-interactive{
+  max-width: 740px;
+  width: 95%;
+}
+
+  /*widget animato responsive last interactive*/
+.health-widget {
+  gap: 25px;
+}
+
+
+.plus-symbol {
+  font-size: 4rem;
+}
 
 
 
+.ecg-line {
+  stroke-width: 4;
+}
 
+
+/* pillola con cerchio*/
+.pill-container-pulse {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.pill-shape {
+  width: 60px;
+  height: 18px;
+}
+
+/* Cerchio loader luminoso attorno alla pillola */
+.pill-container-pulse::before {
+  width: 80px;
+  height: 80px;
+}
 
 
 
