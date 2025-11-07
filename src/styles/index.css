@@ -1212,7 +1212,12 @@ font-size: 1rem;
   align-items: center;
   min-height: 250px;
   padding: 20px;
-  background-color: rgba(71, 99, 223, 0.05);
+   background: linear-gradient(
+   135deg,
+   #ffffff 0%,    
+   #eaf0ff 50%,     
+   #4763DF 100%     
+  ) !important;
   border-radius: 15px;
   margin: 20px 0;
   text-align: center;
@@ -1236,7 +1241,7 @@ font-size: 1rem;
 
 .p-thankyou {
   font-size: 1rem;
-  color: rgba(16, 10, 65, 0.8);
+  color: rgba(71, 99, 223, 0.95);
   margin-top: 5px;
 }
 
